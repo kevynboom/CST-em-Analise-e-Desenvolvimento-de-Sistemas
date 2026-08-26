@@ -1,0 +1,11 @@
+EXERCÍCIOS DO SLIDE "Estruturas condicionais" - 26/08/26 (Nome no BlackBoard é "Aula 3", está na seção "Aulas")
+
+1🔴) Leia um número e diga se ele é positivo, negativo ou zero.
+
+2🔴) Leia a idade de uma pessoa e classifique-a como criança, adolescente, adulta ou idosa.
+
+3🔴) Leia duas notas e diga se o aluno foi aprovado, em recuperação ou reprovado.
+
+4🔴) Leia três números e mostre o maior.
+
+5🔴) Leia o salário de um funcionário e calcule aumento de 10% se o salário for menor que 2000; caso contrário, aumento de 5%.

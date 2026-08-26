@@ -1,0 +1,139 @@
+LISTA DE EXERCÍCIOS 3 - 12/08/26 (Nome no BlackBoard é "Lista de Exercícios 2", está na seção "Aulas")
+
+1✅) Faça um programa que calcule e mostre a área de um círculo. Sabe-se que: Área = π ∗ R2.
+    ALGORITMO
+    DECLARE A,R,PI NUMÉRICO
+    PI<-3.1415
+    ESCREVA "Insira o valor do raio do círculo"
+    LEIA R
+    A<-PI*R*R
+    ESCREVA "Área do círculo será de: ",A
+    FIM_ALGORITMO.
+
+2✅) Faça um programa que receba um número positivo e maior que zero, calcule e mostre:
+ a) o número digitado ao quadrado;
+ b) o número digitado ao cubo;
+ c) a raiz quadrada do número digitado;
+ d) a raiz cúbica do número digitado;
+    ALGORITMO
+    DECLARE N,Q,C,RQ,RC NUMÉRICO
+    ESCREVA "Insira o número"
+    LEIA N
+    Q<-N*N
+    C<-N*N*N
+    RQ<-N**(1.0/2.0)
+    RC<-N**(1.0/3.0)
+    ESCREVA "Quadrado =",Q
+    ESCREVA "Cubo =",C
+    ESCREVA "Raiz quadrada = ",RQ
+    ESCREVA "Raiz cúbica = ",RC
+    FIM_ALGORITMO
+
+3✅) Faça um programa que receba dois números maiores que zero, calcule e mostre um elevado ao outro.
+    ALGORITMO
+    DECLARE N1,N2,P1,P2 NUMÉRICO
+    ESCREVA "Insira os números"
+    LEIA N1,N2
+    P1<-POT(N1,N2)
+    P2<-POT(N2,N1)
+    ESCREVA N1," elevado à "N2,"= ",P1
+    ESCREVA N2," elevado à "N1,"= ",P2
+    FIM_ALGORITMO
+
+4🟡) Faça um programa que receba uma medida em pés, faça as conversões a seguir e mostre os resultados. 
+Sabendo que 1 pé = 12 polegadas, 1 jarda = 3 pés, 1 milha = 1.760 jardas.
+    ALGORITMO
+    DECLARE PES,POL,JAR,MIL NUMÉRICO
+    ESCREVA "Insira a medida em pés"
+    LEIA PES
+    POL<-PES*12
+    JAR<-PES/3
+    MIL<-JAR/1760
+    ESCREVA "Polegadas = ",POL
+    ESCREVA "Jardas = ",JAR
+    ESCREVA "Milhas = ",MIL
+    FIM_ALGORITMO.
+
+5✅) Faça um programa que receba o ano de nascimento de uma pessoa e o ano atual, calcule e mostre: 
+ a) a idade dessa pessoa; 
+ b) quantos anos ela terá em 2050.
+    ALGORITMO
+    DECLARE ANOS_NASC,ANO_ATUAL,IDADE,IDADE_2050 NUMÉRICO
+    ESCREVA "Insira o ano de nascimento depois o ano atual"
+    LEIA ANOS_NASC,ANO_ATUAL
+    IDADE<-ANO_ATUAL-ANOS_NASC
+    IDADE_2050<-2050-ANOS_NASC
+    ESCREVA "Idade atual = ",IDADE
+    ESCREVA "Idade em 2050 = ",IDADE_2050
+    FIM_ALGORITMO.
+
+6✅) O custo ao consumidor de um carro novo é a soma do preço de fábrica com o percentual de lucro do distribuidor e dos impostos aplicados ao preço de fábrica. 
+Faça um programa que receba o preço de fábrica de um veículo, o percentual de lucro do distribuidor e o percentual de impostos, calcule e mostre: 
+ a) o valor correspondente ao lucro do distribuidor; 
+ b) o valor correspondente aos impostos; 
+ c) o preço final do veículo.
+    ALGORITMO
+    DECLARE PRECO_FAB,PERC_DIST,PERC_IMP,VLR_DIST,VLR_IMP,PRECO_FINAL NUMÉRICO
+    ESCREVA "Insira o preço de fábrica"
+    LEIA PRECO_FAB
+    ESCREVA "Insira o percentual de lucro do distribuidor"
+    LEIA PERC_DIST
+    ESCREVA "Insira o percentual de impostos"
+    LEIA PERC_IMP
+    VLR_DIST<-PRECO_FAB*(PERC_DIST/100)
+    VLR_IMP<-PRECO_FAB*(PERC_IMP/100)
+    PRECO_FINAL<-PRECO_FAB+VLR_DIST+VLR_IMP
+    ESCREVA "Lucro do distribuidor = " ,VLR_DIST
+    ESCREVA "Valor dos impostos = ",VLR_IMP
+    ESCREVA "Preço final do veículo = ",PRECO_FINAL
+    FIM_ALGORITMO.
+
+7🔴) Faça um programa que receba o número de horas trabalhadas e o valor do salário mínimo, calcule e mostre o salário a receber, seguindo estas regras: 
+ a) a hora trabalhada vale a metade do salário mínimo. 
+ b) o salário bruto equivale ao número de horas trabalhadas multiplicado pelo valor da hora trabalhada. 
+ c) o imposto equivale a 3 porcento do salário bruto. 
+ d) o salário a receber equivale ao salário bruto menos o imposto.
+    ALGORITMO
+    DECLARE HORAS,SAL_MIN,VLR_HORA,SAL_BRUTO, MPOSTO,SAL_RECEBER NUMÉRICO
+    ESCREVA "Insira o número de horas trabalhadas"
+    LEIA HORAS
+    ESCREVA "Insira o valor do salário mínimo"
+    LEIA SAL_MIN
+    VLR_HORA<-SAL_MIN/2
+    SAL_BRUTO<-HORAS*VLR_HORA
+    IMPOSTO<-SAL_BRUTO*0.03
+    SAL_RECEBER<-SAL_BRUTO-IMPOSTO
+    ESCREVA "Salário a receber = ",SAL_RECEBER
+    FIM_ALGORITMO.
+
+8🔴) Um trabalhador recebeu seu salário e o depositou em sua conta bancária. Esse trabalhador emitiu dois cheques e agora deseja saber seu saldo atual. 
+Sabe-se que cada operação bancária de retirada paga CPMF de 0,38 porcento e o saldo inicial da conta está zerado.
+    ALGORITMO
+    DECLARE SALARIO,CHEQUE1,CHEQUE2,CPMF1,CPMF2,TOTAL_RETIRADAS,SALDO NUMÉRICO
+    ESCREVA "Insira o valor do salário depositado"
+    LEIA SALARIO
+    ESCREVA "Insira o valor do primeiro cheque"
+    LEIA CHEQUE1
+    ESCREVA "Insira o valor do segundo cheque"
+    LEIA CHEQUE2
+    CPMF1<-CHEQUE1*0.0038
+    CPMF2<-CHEQUE2*0.0038
+    TOTAL_RETIRADAS<-CHEQUE1+CPMF1+CHEQUE2+CPMF2
+    SALDO<-SALARIO-TOTAL_RETIRADAS
+    ESCREVA "Saldo atual da conta = ",SALDO
+    FIM_ALGORITMO.
+
+9🔴) Pedro comprou um saco de ração com peso em quilos. Ele possui dois gatos, para os quais fornece a quantidade de ração em gramas. 
+A quantidade diária de ração fornecida para cada gato é sempre a mesma. 
+Faça um programa que receba o peso do saco de ração e a quantidade de ração fornecida para cada gato, calcule e mostre quanto restará de ração no saco após cinco dias.
+    ALGORITMO
+    DECLARE PESO_KG,PESO_GRAMAS,QTD_GATO1,QTD_GATO2,CONSUMO_TOTAL,RESTO NUMÉRICO
+    ESCREVA "Insira o peso do saco de ração (em quilos)"
+    LEIA PESO_KG
+    ESCREVA "Insira a quantidade diária de ração para cada gato (em gramas)"
+    LEIA QTD_GATO1
+    PESO_GRAMAS<-PESO_KG*1000
+    CONSUMO_TOTAL<-(QTD_GATO1*2)*5
+    RESTO<-PESO_GRAMAS - CONSUMO_TOTAL
+    ESCREVA "Resto de ração no saco (em gramas) = ",RESTO
+    FIM_ALGORITMO.

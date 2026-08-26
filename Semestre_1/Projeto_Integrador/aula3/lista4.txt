@@ -1,0 +1,132 @@
+LISTA DE EXERCÍCIOS 4 - 26/08/26 (Nome no BlackBoard é "Lista de Exercícios 3", está na seção "Aulas")
+
+1✅) Faça um programa que receba três notas de um aluno, calcule e mostre a média aritmética e a
+mensagem constante na tabela a seguir. Aos alunos que ficaram para exame, calcule e mostre a nota
+que deverão tirar para serem aprovados, considerando que a média exigida é 6,0: 
+(Consulte tabela no slide)
+    ALGORITMO
+    DECLARE N1,N2,N3,MEDIA,EXAME NUMÉRICO
+    ESCREVA "Insira as notas"
+    LEIA N1,N2,N3
+    MEDIA<-(N1+N2 +N3)/3.0
+    SE (MEDIA>0 E MEDIA<3)
+    ENTÃO INÍCIO
+        ESCREVA "Reprovado"
+    FIM
+    SENÃO SE (MEDIA>=3 E MEDIA<7)
+    ENTÃO INÍCIO
+        ESCREVA "EXAME"
+        EXAME=12-MEDIA
+        ESCREVA "Nota no exame: ",EXAME
+    FIM
+    SENÃO INÍCIO
+        ESCREVA "Aprovado"
+    FIM
+    FIM_ALGORITMO
+
+2✅) Faça um programa que receba dois números e mostre o maior. 
+    ALGORITMO
+    DECLARE N1,N2 NUMÉRICO
+    ESCREVA "Insira os números"
+    LEIA N1,N2
+    SE N1>N2
+    ENTÃO INÍCIO
+    ESCREVA "O maior número é: ",N1
+    FIM
+    SENÃO INÍCIO
+    ESCREVA "O maior número é: ",N2
+    FIM
+    FIM_ALGORITMO
+
+3✅) Faça um programa que receba três números e mostre-os em ordem crescente. Suponha que o usuário digitará três números diferentes.
+    ALGORITMO
+    DECLARE N1,N2,N3 NUMÉRICO
+    ESCREVA "Insira os números"
+    LEIA N1,N2,N3
+    SE N1<N2 E N2<N3
+    ENTÃO INÍCIO
+        SE N2<N3
+        ENTÃO INÍCIO
+            ESCREVA N1,N2,N3
+        FIM
+        SENÃO INÍCIO
+            ESCREVA N1,N3,N2
+        FIM
+    FIM
+    SENÃO SE N2<N1 E N2<N3
+    ENTÃO INÍCIO
+        SE N1<N3
+        ENTÃO INÍCIO
+            ESCREVA N2,N1,N3
+        FIM
+        SENÃO INÍCIO
+            ESCREVA N2,N3,N1
+        FIM
+    FIM
+    SENÃO INÍCIO
+        SE N1<N2
+        ENTÃO INÍCIO
+            ESCREVA N3,N1,N2
+        FIM
+        SENÃO INÍCIO
+            ESCREVA N3,N2,N1
+        FIM
+    FIM
+    FIM_ALGORITMO
+
+4🔴) Faça um programa que receba um número inteiro e verifique se é par ou ímpar.
+    ALGORITMO
+    DECLARE N1 NUMÉRICO
+    ESCREVA "Insira um número"
+    LEIA N1
+    ...
+
+5✅) Faça um programa que mostre o menu de opções a seguir, receba a opção do usuário e os dados
+necessários para executar cada operação.
+Menus de opções:
+1. Somar dois números.
+2. Raiz quadrada de um número.
+Digite a opção desejada:
+    ALGORITMO
+    DECLARE OP,N1,N2,S,R NUMÉRICO
+    ESCREVA "MENU: 1-Somar 2-Raiz quadrada"
+    LEIA OP
+    SE OP=1
+    ENTÃO INÍCIO
+        ESCREVA: "Insira os números"
+        LEIA N1,N2
+        S<-N1+N2
+        ESCREVA "A soma deu: ",S
+    FIM
+    SENÃO SE OP=2
+    ENTÃO INÍCIO
+        ESCREVA "Insira o valor"
+        LEIA N1
+        R<-POT(N1,1.0/2.0)
+        ESCREVA "A raiz quadrada de ",n1" é ",R
+    FIM
+    SENÃO INÍCIO
+        ESCREVA "Opção inválida"
+    FIM
+    FIM_ALGORITMO
+
+6🔴) Faça um programa que receba o salário inicial de um funcionário, calcule e mostre o novo salário, acrescido de bonificação e de auxílio escola.
+(Consulte tabela no slide)
+
+7🔴) Um mercadinho deseja reajustar os preços de seus produtos usando o seguinte critério: o produto
+poderá ter seu preço aumentado ou diminuído. Para o preço ser alterado, o produto deve preencher
+pelo menos um dos requisitos a seguir:
+(Consulte tabela no slide)
+
+8🔴) Dados três valores X, Y e Z, verifique se eles podem ser os comprimentos dos lados de um triângulo
+e, se forem verifique se é um triângulo equilátero, isóscele ou escaleno. Se eles não formarem um
+triângulo, escreva uma mensagem. Considere que:
+a) o comprimento de cada lado de um triângulo é menor que soma dos outros dois lados;
+b) chama-se equilátero o triângulo que tem três lados iguais;
+c) denomina-se isósceles o triângulo que tem o comprimento de dois lados iguais;
+d) recebe o nome de escaleno o triângulo que tem os três lados diferentes.
+
+9🔴) Faça um programa que receba a medida de um ângulo em graus. Calcule e mostre o quadrante em
+que se localiza esse ângulo. Considere os quadrantes da trigonometria e, para ângulos maiores que
+360 ou menores que −360, reduzi-los, mostrando também o número de voltas e o sentido da volta
+(horário ou anti-horário).

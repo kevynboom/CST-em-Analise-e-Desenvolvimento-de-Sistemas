@@ -1,4 +1,4 @@
-// Básico de variáveis
+// Básico de variáveis - 24/08/26
 public class ExemploVariaveis {
     public static void main(String[] args) {
         // Declaração de variáveis

@@ -6,6 +6,6 @@ Bem-vindo(a) ao meu repositório central de estudos! Este espaço é dedicado a 
 
 ## 🚀 Sobre o Repositório
 
-Aqui você encontrará a evolução prática do meu aprendizado no curso, organizando desde lógica de programação básica e pseudocódigos até estruturas de dados e desenvolvimento de software avançado. O objetivo é manter um histórico do meu progresso acadêmico e técnico.
+Ainda estou criando um padrão de organização para o repositório (estruturação de pastas, nomes de arquivos e formatação de códigos) com o decorrer do curso, então por enquanto fica essa bagunça aí.
 
 ---

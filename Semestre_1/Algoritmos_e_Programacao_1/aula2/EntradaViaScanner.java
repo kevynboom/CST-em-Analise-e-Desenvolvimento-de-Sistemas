@@ -1,3 +1,4 @@
+// Entrada de dados - 24/08/26
 import java.util.Scanner; // Importação da ferramenta de entrada de dados do Java
 
 public class EntradaViaScanner {

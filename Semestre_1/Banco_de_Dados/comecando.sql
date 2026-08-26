@@ -1,5 +1,4 @@
--- Ainda não fizemos nenhum exercício e o outro arquivo é um template 
--- disponibilizado pelo professor provavelmente para aulas futuras.
+-- Ainda não fizemos nenhum exercício, abaixo é apenas um template de um slide
 
 CREATE TABLE turma ( 
 idturma INTEGER(4) NOT NULL AUTO_INCREMENT, 
