@@ -1,132 +1,252 @@
 LISTA DE EXERCÍCIOS 4 - 26/08/26 (Nome no BlackBoard é "Lista de Exercícios 3", está na seção "Aulas")
 
-1✅) Faça um programa que receba três notas de um aluno, calcule e mostre a média aritmética e a
+1) Faça um programa que receba três notas de um aluno, calcule e mostre a média aritmética e a
 mensagem constante na tabela a seguir. Aos alunos que ficaram para exame, calcule e mostre a nota
 que deverão tirar para serem aprovados, considerando que a média exigida é 6,0: 
 (Consulte tabela no slide)
-    ALGORITMO
-    DECLARE N1,N2,N3,MEDIA,EXAME NUMÉRICO
-    ESCREVA "Insira as notas"
-    LEIA N1,N2,N3
-    MEDIA<-(N1+N2 +N3)/3.0
-    SE (MEDIA>0 E MEDIA<3)
+ALGORITMO
+DECLARE N1,N2,N3,MEDIA,EXAME NUMÉRICO
+ESCREVA "Insira as notas"
+LEIA N1,N2,N3
+MEDIA<-(N1+N2 +N3)/3.0
+SE (MEDIA>0 E MEDIA<3)
+ENTÃO INÍCIO
+    ESCREVA "Reprovado"
+FIM
+SENÃO SE (MEDIA>=3 E MEDIA<7)
+ENTÃO INÍCIO
+    ESCREVA "EXAME"
+    EXAME=12-MEDIA
+    ESCREVA "Nota no exame: ",EXAME
+FIM
+SENÃO INÍCIO
+    ESCREVA "Aprovado"
+FIM
+FIM_ALGORITMO.
+
+2) Faça um programa que receba dois números e mostre o maior. 
+ALGORITMO
+DECLARE N1,N2 NUMÉRICO
+ESCREVA "Insira os números"
+LEIA N1,N2
+SE N1>N2
+ENTÃO INÍCIO
+ESCREVA "O maior número é: ",N1
+FIM
+SENÃO INÍCIO
+ESCREVA "O maior número é: ",N2
+FIM
+FIM_ALGORITMO.
+
+3) Faça um programa que receba três números e mostre-os em ordem crescente. Suponha que o usuário digitará três números diferentes.
+ALGORITMO
+DECLARE N1,N2,N3 NUMÉRICO
+ESCREVA "Insira os números"
+LEIA N1,N2,N3
+SE N1<N2 E N2<N3
+ENTÃO INÍCIO
+    SE N2<N3
     ENTÃO INÍCIO
-        ESCREVA "Reprovado"
-    FIM
-    SENÃO SE (MEDIA>=3 E MEDIA<7)
-    ENTÃO INÍCIO
-        ESCREVA "EXAME"
-        EXAME=12-MEDIA
-        ESCREVA "Nota no exame: ",EXAME
+        ESCREVA N1,N2,N3
     FIM
     SENÃO INÍCIO
-        ESCREVA "Aprovado"
+        ESCREVA N1,N3,N2
     FIM
-    FIM_ALGORITMO
-
-2✅) Faça um programa que receba dois números e mostre o maior. 
-    ALGORITMO
-    DECLARE N1,N2 NUMÉRICO
-    ESCREVA "Insira os números"
-    LEIA N1,N2
-    SE N1>N2
+FIM
+SENÃO SE N2<N1 E N2<N3
+ENTÃO INÍCIO
+    SE N1<N3
     ENTÃO INÍCIO
-    ESCREVA "O maior número é: ",N1
+        ESCREVA N2,N1,N3
     FIM
     SENÃO INÍCIO
-    ESCREVA "O maior número é: ",N2
+        ESCREVA N2,N3,N1
     FIM
-    FIM_ALGORITMO
-
-3✅) Faça um programa que receba três números e mostre-os em ordem crescente. Suponha que o usuário digitará três números diferentes.
-    ALGORITMO
-    DECLARE N1,N2,N3 NUMÉRICO
-    ESCREVA "Insira os números"
-    LEIA N1,N2,N3
-    SE N1<N2 E N2<N3
+FIM
+SENÃO INÍCIO
+    SE N1<N2
     ENTÃO INÍCIO
-        SE N2<N3
-        ENTÃO INÍCIO
-            ESCREVA N1,N2,N3
-        FIM
-        SENÃO INÍCIO
-            ESCREVA N1,N3,N2
-        FIM
-    FIM
-    SENÃO SE N2<N1 E N2<N3
-    ENTÃO INÍCIO
-        SE N1<N3
-        ENTÃO INÍCIO
-            ESCREVA N2,N1,N3
-        FIM
-        SENÃO INÍCIO
-            ESCREVA N2,N3,N1
-        FIM
+        ESCREVA N3,N1,N2
     FIM
     SENÃO INÍCIO
-        SE N1<N2
-        ENTÃO INÍCIO
-            ESCREVA N3,N1,N2
-        FIM
-        SENÃO INÍCIO
-            ESCREVA N3,N2,N1
-        FIM
+        ESCREVA N3,N2,N1
     FIM
-    FIM_ALGORITMO
+FIM
+FIM_ALGORITMO.
 
-4🔴) Faça um programa que receba um número inteiro e verifique se é par ou ímpar.
-    ALGORITMO
-    DECLARE N1 NUMÉRICO
-    ESCREVA "Insira um número"
-    LEIA N1
-    ...
+4) Faça um programa que receba um número inteiro e verifique se é par ou ímpar.
+ALGORITMO
+DECLARE N1 NUMÉRICO
+ESCREVA "Insira um número"
+LEIA N1
+SE N1 MOD 2=0
+ENTÃO INÍCIO
+    ESCREVA "O número é par"
+FIM
+SENÃO INÍCIO
+    ESCREVA "O número é ímpar"
+FIM
+FIM_ALGORITMO.
 
-5✅) Faça um programa que mostre o menu de opções a seguir, receba a opção do usuário e os dados
+5) Faça um programa que mostre o menu de opções a seguir, receba a opção do usuário e os dados
 necessários para executar cada operação.
 Menus de opções:
 1. Somar dois números.
 2. Raiz quadrada de um número.
 Digite a opção desejada:
-    ALGORITMO
-    DECLARE OP,N1,N2,S,R NUMÉRICO
-    ESCREVA "MENU: 1-Somar 2-Raiz quadrada"
-    LEIA OP
-    SE OP=1
-    ENTÃO INÍCIO
-        ESCREVA: "Insira os números"
-        LEIA N1,N2
-        S<-N1+N2
-        ESCREVA "A soma deu: ",S
-    FIM
-    SENÃO SE OP=2
-    ENTÃO INÍCIO
-        ESCREVA "Insira o valor"
-        LEIA N1
-        R<-POT(N1,1.0/2.0)
-        ESCREVA "A raiz quadrada de ",n1" é ",R
-    FIM
-    SENÃO INÍCIO
-        ESCREVA "Opção inválida"
-    FIM
-    FIM_ALGORITMO
+ALGORITMO
+DECLARE OP,N1,N2,S,R NUMÉRICO
+ESCREVA "MENU: 1-Somar 2-Raiz quadrada"
+LEIA OP
+SE OP=1
+ENTÃO INÍCIO
+    ESCREVA "Insira os números"
+    LEIA N1,N2
+    S<-N1+N2
+    ESCREVA "A soma deu: ",S
+FIM
+SENÃO SE OP=2
+ENTÃO INÍCIO
+    ESCREVA "Insira o valor"
+    LEIA N1
+    R<-POT(N1,1.0/2.0)
+    ESCREVA "A raiz quadrada de ",N1," é ",R
+FIM
+SENÃO INÍCIO
+    ESCREVA "Opção inválida"
+FIM
+FIM_ALGORITMO.
 
-6🔴) Faça um programa que receba o salário inicial de um funcionário, calcule e mostre o novo salário, acrescido de bonificação e de auxílio escola.
+6) Faça um programa que receba o salário inicial de um funcionário, calcule e mostre o novo salário, acrescido de bonificação e de auxílio escola.
 (Consulte tabela no slide)
+ALGORITMO
+DECLARE SALARIO, BONIFICACAO, AUXILIO, NOVO_SALARIO NUMÉRICO
+ESCREVA "Insira o salário inicial"
+LEIA SALARIO
+SE SALARIO<=500
+ENTÃO INÍCIO
+    BONIFICACAO<-SALARIO*0.05
+FIM
+SENÃO SE SALARIO<=1200
+ENTÃO INÍCIO
+    BONIFICACAO<-SALARIO*0.12
+FIM
+SENÃO INÍCIO
+    BONIFICACAO<-0
+FIM
+SE SALARIO<=600
+ENTÃO INÍCIO
+    AUXILIO<-150
+FIM
+SENÃO INÍCIO
+    AUXILIO<-100
+FIM
+NOVO_SALARIO<-SALARIO+BONIFICACAO+AUXILIO
+ESCREVA "O novo salário é de: ",NOVO_SALARIO
+FIM_ALGORITMO.
 
-7🔴) Um mercadinho deseja reajustar os preços de seus produtos usando o seguinte critério: o produto
+7) Um mercadinho deseja reajustar os preços de seus produtos usando o seguinte critério: o produto
 poderá ter seu preço aumentado ou diminuído. Para o preço ser alterado, o produto deve preencher
 pelo menos um dos requisitos a seguir:
 (Consulte tabela no slide)
+ALGORITMO
+DECLARE PRECO_ATUAL,VENDA_MEDIA,NOVO_PRECO NUMÉRICO
+ESCREVA "Insira o preço atual e a venda média mensal"
+LEIA PRECO_ATUAL,VENDA_MEDIA
+SE VENDA_MEDIA<500 OU PRECO_ATUAL<30
+ENTÃO INÍCIO
+    NOVO_PRECO<-PRECO_ATUAL+(PRECO_ATUAL*0.10)
+    ESCREVA "Novo preço com aumento de 10%: ",NOVO_PRECO
+FIM
+SENÃO SE (VENDA_MEDIA>=500 E VENDA_MEDIA<1200) OU (PRECO_ATUAL>=30 E PRECO_ATUAL<80)
+ENTÃO INÍCIO
+    NOVO_PRECO<-PRECO_ATUAL+(PRECO_ATUAL*0.15)
+    ESCREVA "Novo preço com aumento de 15%: ",NOVO_PRECO
+FIM
+SENÃO SE VENDA_MEDIA>=1200 E PRECO_ATUAL>=80
+ENTÃO INÍCIO
+    NOVO_PRECO<-PRECO_ATUAL-(PRECO_ATUAL*0.20)
+    ESCREVA "Novo preço com diminuição de 20%: ",NOVO_PRECO
+FIM
+SENÃO INÍCIO
+    ESCREVA "O produto não atende aos requisitos para alteração de preço"
+FIM
+FIM_ALGORITMO.
 
-8🔴) Dados três valores X, Y e Z, verifique se eles podem ser os comprimentos dos lados de um triângulo
+8) Dados três valores X, Y e Z, verifique se eles podem ser os comprimentos dos lados de um triângulo
 e, se forem verifique se é um triângulo equilátero, isóscele ou escaleno. Se eles não formarem um
 triângulo, escreva uma mensagem. Considere que:
 a) o comprimento de cada lado de um triângulo é menor que soma dos outros dois lados;
 b) chama-se equilátero o triângulo que tem três lados iguais;
 c) denomina-se isósceles o triângulo que tem o comprimento de dois lados iguais;
 d) recebe o nome de escaleno o triângulo que tem os três lados diferentes.
+ALGORITMO
+DECLARE X,Y,Z NUMÉRICO
+ESCREVA "Insira os três valores"
+LEIA X,Y,Z
+SE X<Y+Z E Y<X+Z E Z<X+Y
+ENTÃO INÍCIO
+    SE X=Y E Y=Z
+    ENTÃO INÍCIO
+        ESCREVA "Triângulo equilátero"
+    FIM
+    SENÃO SE X=Y OU Y=Z OU X=Z
+    ENTÃO INÍCIO
+        ESCREVA "Triângulo isósceles"
+    FIM
+    SENÃO INÍCIO
+        ESCREVA "Triângulo escaleno"
+    FIM
+FIM
+SENÃO INÍCIO
+    ESCREVA "Não formam um triângulo"
+FIM
+FIM_ALGORITMO.
 
-9🔴) Faça um programa que receba a medida de um ângulo em graus. Calcule e mostre o quadrante em
+9) Faça um programa que receba a medida de um ângulo em graus. Calcule e mostre o quadrante em
 que se localiza esse ângulo. Considere os quadrantes da trigonometria e, para ângulos maiores que
 360 ou menores que −360, reduzi-los, mostrando também o número de voltas e o sentido da volta
 (horário ou anti-horário).
+ALGORITMO
+DECLARE ANGULO,VOLTAS,RESTO NUMÉRICO
+ESCREVA "Insira a medida do ângulo em graus"
+LEIA ANGULO
+VOLTAS<-0
+SE ANGULO>360
+ENTÃO INÍCIO
+    VOLTAS<-ANGULO DIV 360
+    RESTO<-ANGULO MOD 360
+    ESCREVA "Número de voltas: ",VOLTAS
+    ESCREVA "Sentido: anti-horário"
+FIM
+SENÃO SE ANGULO<-360
+ENTÃO INÍCIO
+    VOLTAS<-ABS(ANGULO) DIV 360
+    RESTO<- -(ABS(ANGULO) MOD 360)
+    ESCREVA "Número de voltas: ",VOLTAS
+    ESCREVA "Sentido: horário"
+FIM
+SENÃO INÍCIO
+    RESTO<-ANGULO
+    ESCREVA "Número de voltas: 0"
+FIM
+SE (RESTO>0 E RESTO<=90) OU (RESTO>-360 E RESTO<-270)
+ENTÃO INÍCIO
+    ESCREVA "1º Quadrante"
+FIM
+SENÃO SE (RESTO>90 E RESTO<=180) OU (RESTO>=-270 E RESTO<-180)
+ENTÃO INÍCIO
+    ESCREVA "2º Quadrante"
+FIM
+SENÃO SE (RESTO>180 E RESTO<=270) OU (RESTO>=-180 E RESTO<-90)
+ENTÃO INÍCIO
+    ESCREVA "3º Quadrante"
+FIM
+SENÃO SE (RESTO>270 E RESTO<=360) OU (RESTO>=-90 E RESTO<0)
+ENTÃO INÍCIO
+    ESCREVA "4º Quadrante"
+FIM
+SENÃO INÍCIO
+    ESCREVA "O ângulo está sobre os eixos"
+FIM
+FIM_ALGORITMO.

@@ -1,73 +1,73 @@
 LISTA DE EXERCÍCIOS 2 - 12/08/26 (Nome no BlackBoard é "Lista de Exercícios 1", está na seção "Aulas")
 
-1✅) Faça um programa que receba quatro números inteiros, calcule e mostre a soma desses números.
-    ALGORITMO
-    DECLARE N1,N2,N3,N4,S NUMÉRICO
-    ESCREVA "Insira os números"
-    LEIA N1,N2,N3,N4
-    S<-N1+N2+N3+N4
-    ESCREVA "A soma deu: ",S
-    FIM_ALGORITMO.
+1) Faça um programa que receba quatro números inteiros, calcule e mostre a soma desses números.
+ALGORITMO
+DECLARE N1,N2,N3,N4,S NUMÉRICO
+ESCREVA "Insira os números"
+LEIA N1,N2,N3,N4
+S<-N1+N2+N3+N4
+ESCREVA "A soma deu: ",S
+FIM_ALGORITMO.
 
-2✅) Faça um programa que receba três notas, calcule e mostre a média aritmética.
-    ALGORITMO
-    DECLARE N1,N2,N3,MA NUMÉRICO
-    ESCREVA "Insira as notas"
-    LEIA N1,N2,N3
-    MA<-(N1+N2+N3)/3.0
-    ESCREVA "A média será de: ",MA
-    FIM_ALGORITMO.
+2) Faça um programa que receba três notas, calcule e mostre a média aritmética.
+ALGORITMO
+DECLARE N1,N2,N3,MA NUMÉRICO
+ESCREVA "Insira as notas"
+LEIA N1,N2,N3
+MA<-(N1+N2+N3)/3.0
+ESCREVA "A média será de: ",MA
+FIM_ALGORITMO.
 
-3✅) Faça um programa que receba três notas e seus respectivos pesos, calcule e mostre a média ponderada.
-    ALGORITMO
-    DECLARE N1,P1,N2,P2,N3,P3,MP NUMÉRICO
-    ESCREVA "Insira as notas"
-    LEIA N1,N2,N3
-    ESCREVA "Insira os pesos"
-    LEIA P1,P2,P3
-    MP<-(N1*P1+N2*P2+N3*P3)/(P1+P2+P3)
-    ESCREVA "A média ponderada será de: ",MP
-    FIM_ALGORITMO.
+3) Faça um programa que receba três notas e seus respectivos pesos, calcule e mostre a média ponderada.
+ALGORITMO
+DECLARE N1,P1,N2,P2,N3,P3,MP NUMÉRICO
+ESCREVA "Insira as notas"
+LEIA N1,N2,N3
+ESCREVA "Insira os pesos"
+LEIA P1,P2,P3
+MP<-(N1*P1+N2*P2+N3*P3)/(P1+P2+P3)
+ESCREVA "A média ponderada será de: ",MP
+FIM_ALGORITMO.
 
-4✅) Faça um programa que receba o salário de um funcionário, calcule e mostre o novo salário, sabendo-se que este sofreu um aumento de 25 porcento.
-    ALGORITMO
-    DECLARE S,NS NUMÉRICO
-    ESCREVA "Insira o salário atual"
-    LEIA S
-    NS<-S*1.25
-    ESCREVA "O novo salário será de: ",NS
-    FIM_ALGORITMO.
+4) Faça um programa que receba o salário de um funcionário, calcule e mostre o novo salário, sabendo-se que este sofreu um aumento de 25 porcento.
+ALGORITMO
+DECLARE S,NS NUMÉRICO
+ESCREVA "Insira o salário atual"
+LEIA S
+NS<-S*1.25
+ESCREVA "O novo salário será de: ",NS
+FIM_ALGORITMO.
 
-5🟡) Faça um programa que receba o salário de um funcionário e o percentual de aumento, calcule e mostre o valor do aumento e o novo salário.
-    ALGORITMO
-    DECLARE S,PA,VA,SN NUMÉRICO
-    ESCREVA "Insira o salário atual"
-    LEIA S
-    ESCREVA "Insira o percentual de aumento"
-    LEIA PA
-    VA<-S*(PA/100)
-    SN<-S+VA
-    ESCREVA "O valor de aumento foi de: ", VA, ", o salário novo será de: ",SN
-    FIM_ALGORITMO.
+5) Faça um programa que receba o salário de um funcionário e o percentual de aumento, calcule e mostre o valor do aumento e o novo salário.
+ALGORITMO
+DECLARE S,PA,VA,SN NUMÉRICO
+ESCREVA "Insira o salário atual"
+LEIA S
+ESCREVA "Insira o percentual de aumento"
+LEIA PA
+VA<-S*(PA/100)
+SN<-S+VA
+ESCREVA "O valor de aumento foi de: ", VA, ", o salário novo será de: ",SN
+FIM_ALGORITMO.
 
-6🟡) Faça um programa que receba o salário base de um funcionário, calcule e mostre o salário a receber, 
+6) Faça um programa que receba o salário base de um funcionário, calcule e mostre o salário a receber, 
 sabendo-se que o funcionário tem gratificação de 5 porcento sobre o salário base e paga imposto de 7 porcento também sobre o salário base.
-    ALGORITMO
-    DECLARE S, SR NUMÉRICO
-    ESCREVA "Insira o salário base"
-    LEIA S
-    SR<-S+(S*0.05)-(S*0.07)
-    ESCREVA "Salário a receber será: ",SR
-    FIM_ALGORITMO.
+ALGORITMO
+DECLARE S,SR NUMÉRICO
+ESCREVA "Insira o salário base"
+LEIA S
+SR<-S+(S*0.05)-(S*0.07)
+ESCREVA "Salário a receber será: ",SR
+FIM_ALGORITMO.
 
-7🟡) Faça um programa que receba o valor de um depósito e o valor da taxa de juros, calcule e mostre o valor do rendimento e o valor total depois do rendimento.
-    ALGORITMO
-    DECLARE D,TX,REND,TOTAL NUMÉRICO
-    ESCREVA "Insira o valor do depósito"
-    LEIA D
-    ESCREVA "Insira a taxa de juros"
-    LEIA TX
-    REND<-D*(TX / 100)
-    TOTAL<-D+REND
-    ESCREVA "O valor do rendimento é: ",REND,", e o valor total é: ",TOTAL
-    FIM_ALGORITMO.
+7) Faça um programa que receba o valor de um depósito e o valor da taxa de juros, calcule e mostre o valor do rendimento e o valor total depois do rendimento.
+ALGORITMO
+DECLARE D,TX,REND,TOTAL NUMÉRICO
+ESCREVA "Insira o valor do depósito"
+LEIA D
+ESCREVA "Insira a taxa de juros"
+LEIA TX
+REND<-D*(TX / 100)
+TOTAL<-D+REND
+ESCREVA "O valor do rendimento é: ",REND,", e o valor total é: ",TOTAL
+FIM_ALGORITMO.

@@ -1,45 +1,45 @@
 EXERCÍCIOS DO SLIDE "Desenvolvimento de Algoritmos" - 19/08/26 (Nome no BlackBoard é "Aula 2", está na seção "Aulas")
 
-1✅) Leia o nome de uma pessoa e escreva uma mensagem de boas-vindas.
-    ALGORITMO
-    DECLARE NOME LITERAL
-    ESCREVA "Digite seu NOME"
-    LEIA NOME
-    ESCREVA "Seja bem-vindo(a) ",NOME
-    FIM_ALGORITMO.
+1) Leia o nome de uma pessoa e escreva uma mensagem de boas-vindas.
+ALGORITMO
+DECLARE NOME LITERAL
+ESCREVA "Digite seu NOME"
+LEIA NOME
+ESCREVA "Seja bem-vindo(a) ",NOME
+FIM_ALGORITMO.
 
-2✅)  Leia dois números e mostre a subtração do primeiro pelo segundo.
-    ALGORITMO
-    DECLARE N1,N2,RESULTADO NUMÉRICO
-    ESCREVA "Digite os dois números"
-    LEIA N1,N2
-    RESULTADO<-N1-N2
-    ESCREVA "A subtração foi: ",RESULTADO
-    FIM_ALGORITMO.
+2)  Leia dois números e mostre a subtração do primeiro pelo segundo.
+ALGORITMO
+DECLARE N1,N2,RESULTADO NUMÉRICO
+ESCREVA "Digite os dois números"
+LEIA N1,N2
+RESULTADO<-N1-N2
+ESCREVA "A subtração foi: ",RESULTADO
+FIM_ALGORITMO.
 
-3✅) Leia a base e a altura de um retângulo e mostre sua área.
-    ALGORITMO
-    DECLARE BASE,ALTURA,AREA NUMÉRICO
-    ESCREVA "Digite a BASE e a ALTURA do seu retângulo"
-    LEIA BASE,ALTURA
-    AREA<-BASE*ALTURA
-    ESCREVA "A área do seu retângulo é: ",AREA
-    FIM_ALGORITMO.
+3) Leia a base e a altura de um retângulo e mostre sua área.
+ALGORITMO
+DECLARE BASE,ALTURA,AREA NUMÉRICO
+ESCREVA "Digite a BASE e a ALTURA do seu retângulo"
+LEIA BASE,ALTURA
+AREA<-BASE*ALTURA
+ESCREVA "A área do seu retângulo é: ",AREA
+FIM_ALGORITMO.
 
-4✅) Leia três notas e mostre a média aritmética.
-    ALGORITMO
-    DECLARE N1,N2,N3,MEDIA NUMÉRICO
-    ESCREVA "Digite as 3 notas"
-    LEIA N1,N2,N3
-    MEDIA<-(N1+N2+N3)/3
-    ESCREVA "A média das notas foi: ",MEDIA
-    FIM_ALGORITMO.
+4) Leia três notas e mostre a média aritmética.
+ALGORITMO
+DECLARE N1,N2,N3,MEDIA NUMÉRICO
+ESCREVA "Digite as 3 notas"
+LEIA N1,N2,N3
+MEDIA<-(N1+N2+N3)/3
+ESCREVA "A média das notas foi: ",MEDIA
+FIM_ALGORITMO.
 
-5✅) Leia o salário de uma pessoa e mostre o salário com aumento de 15%.
-    ALGORITMO
-    DECLARE SALARIO,SALARIO_AUMENTADO NUMÉRICO
-    ESCREVA "Digite o salário"
-    LEIA SALARIO
-    SALARIO_AUMENTADO<-SALARIO*1.15
-    ESCREVA "O salário com aumento de 15% será: ",SALARIO_AUMENTADO
-    FIM_ALGORITMO.
+5) Leia o salário de uma pessoa e mostre o salário com aumento de 15%.
+ALGORITMO
+DECLARE SALARIO,SALARIO_AUMENTADO NUMÉRICO
+ESCREVA "Digite o salário"
+LEIA SALARIO
+SALARIO_AUMENTADO<-SALARIO*1.15
+ESCREVA "O salário com aumento de 15% será: ",SALARIO_AUMENTADO
+FIM_ALGORITMO.

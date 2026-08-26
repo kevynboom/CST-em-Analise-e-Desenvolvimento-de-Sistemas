@@ -1,5 +1,0 @@
-Legenda: 
-✅= Exercício que terminei de fazer e que também foi corrigida pelo professor em aula
-🟡= Mesmo do item anterior mas que não houve correção por parte do professor
-🔴= Exercício que ainda não terminei de fazer
-...= Lembrete pessoal de onde prosseguir em determinado código

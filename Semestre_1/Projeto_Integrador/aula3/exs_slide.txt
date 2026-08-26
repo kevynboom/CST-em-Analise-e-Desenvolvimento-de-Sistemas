@@ -1,11 +1,93 @@
 EXERCÍCIOS DO SLIDE "Estruturas condicionais" - 26/08/26 (Nome no BlackBoard é "Aula 3", está na seção "Aulas")
 
-1🔴) Leia um número e diga se ele é positivo, negativo ou zero.
+1) Leia um número e diga se ele é positivo, negativo ou zero.
+ALGORITMO
+DECLARE N NUMÉRICO
+ESCREVA "Insira um número"
+LEIA N
+SE N>0
+ENTÃO INÍCIO
+    ESCREVA "Positivo"
+FIM
+SENÃO SE N<0
+ENTÃO INÍCIO
+    ESCREVA "Negativo"
+FIM
+SENÃO INÍCIO
+    ESCREVA "Zero"
+FIM
+FIM_ALGORITMO.
 
-2🔴) Leia a idade de uma pessoa e classifique-a como criança, adolescente, adulta ou idosa.
+2) Leia a idade de uma pessoa e classifique-a como criança, adolescente, adulta ou idosa.
+ALGORITMO
+DECLARE IDADE NUMÉRICO
+ESCREVA "Insira a idade"
+LEIA IDADE
+SE IDADE<13
+ENTÃO INÍCIO
+    ESCREVA "Criança"
+FIM
+SENÃO SE IDADE<18
+ENTÃO INÍCIO
+    ESCREVA "Adolescente"
+FIM
+SENÃO SE IDADE<60
+ENTÃO INÍCIO
+    ESCREVA "Adulta"
+FIM
+SENÃO INÍCIO
+    ESCREVA "Idosa"
+FIM
+FIM_ALGORITMO.
 
-3🔴) Leia duas notas e diga se o aluno foi aprovado, em recuperação ou reprovado.
+3) Leia duas notas e diga se o aluno foi aprovado, em recuperação ou reprovado.
+ALGORITMO
+DECLARE N1,N2,MEDIA NUMÉRICO
+ESCREVA "Insira as duas notas"
+LEIA N1,N2
+MEDIA<-(N1+N2)/2
+SE MEDIA>=7
+ENTÃO INÍCIO
+    ESCREVA "Aprovado"
+FIM
+SENÃO SE MEDIA>=4
+ENTÃO INÍCIO
+    ESCREVA "Recuperação"
+FIM
+SENÃO INÍCIO
+    ESCREVA "Reprovado"
+FIM
+FIM_ALGORITMO.
 
-4🔴) Leia três números e mostre o maior.
+4) Leia três números e mostre o maior.
+ALGORITMO
+DECLARE N1,N2,N3 NUMÉRICO
+ESCREVA "Insira os três números"
+LEIA N1,N2,N3
+SE N1>=N2 E N1>=N3
+ENTÃO INÍCIO
+    ESCREVA "O maior número é: ",N1
+FIM
+SENÃO SE N2>=N1 E N2>=N3
+ENTÃO INÍCIO
+    ESCREVA "O maior número é: ",N2
+FIM
+SENÃO INÍCIO
+    ESCREVA "O maior número é: ",N3
+FIM
+FIM_ALGORITMO.
 
-5🔴) Leia o salário de um funcionário e calcule aumento de 10% se o salário for menor que 2000; caso contrário, aumento de 5%.
+5) Leia o salário de um funcionário e calcule aumento de 10% se o salário for menor que 2000; caso contrário, aumento de 5%.
+ALGORITMO
+DECLARE SALARIO,NOVO_SALARIO NUMÉRICO
+ESCREVA "Insira o salário"
+LEIA SALARIO
+SE SALARIO<2000
+ENTÃO INÍCIO
+    NOVO_SALARIO<-SALARIO*1.10
+FIM
+SENÃO INÍCIO
+    NOVO_SALARIO<-SALARIO*1.05
+FIM
+ESCREVA "O novo salário é: ",NOVO_SALARIO
+FIM_ALGORITMO.

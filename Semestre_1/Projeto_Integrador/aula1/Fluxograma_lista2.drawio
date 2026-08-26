@@ -1,0 +1,121 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Página-1" id="z15cS_UMLQbyDmNynfW4">
+    <mxGraphModel dx="1406" dy="746" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="MigCzSZp2fgGJ_X8fslG-1" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontFamily=Helvetica;" value="&lt;b style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 204, 255));&quot;&gt;LISTA DE EXERCÍCIOS 2 - Fluxogramas - Questões pares&lt;/b&gt;" vertex="1">
+          <mxGeometry height="30" width="346" x="10" as="geometry" />
+        </mxCell>
+        <mxCell id="MigCzSZp2fgGJ_X8fslG-2" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontStyle=1;fontFamily=Helvetica;" value="2." vertex="1">
+          <mxGeometry height="50" width="70" y="35" as="geometry" />
+        </mxCell>
+        <mxCell id="MigCzSZp2fgGJ_X8fslG-3" parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_1;whiteSpace=wrap;fontFamily=Helvetica;" value="INICIO" vertex="1">
+          <mxGeometry height="60" width="100" x="47" y="45" as="geometry" />
+        </mxCell>
+        <mxCell id="MigCzSZp2fgGJ_X8fslG-4" parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.display;whiteSpace=wrap;fontFamily=Helvetica;" value="&quot;Insira as notas&quot;" vertex="1">
+          <mxGeometry height="80" width="136" x="29" y="135" as="geometry" />
+        </mxCell>
+        <mxCell id="MigCzSZp2fgGJ_X8fslG-5" parent="1" style="html=1;strokeWidth=2;shape=manualInput;boundedLbl=1;whiteSpace=wrap;rounded=1;size=26;arcSize=11;fontFamily=Helvetica;" value="N1,N2,N3" vertex="1">
+          <mxGeometry height="60" width="100" x="47" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="MigCzSZp2fgGJ_X8fslG-6" parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;fontFamily=Helvetica;" value="MA&amp;lt;-(N1+N2+N3)/3.0" vertex="1">
+          <mxGeometry height="60" width="140" x="27" y="325" as="geometry" />
+        </mxCell>
+        <mxCell id="MigCzSZp2fgGJ_X8fslG-7" parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.display;whiteSpace=wrap;fontFamily=Helvetica;" value="&quot;A média será de: &quot;,MA" vertex="1">
+          <mxGeometry height="80" width="150" x="22" y="415" as="geometry" />
+        </mxCell>
+        <mxCell id="MigCzSZp2fgGJ_X8fslG-8" parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_1;whiteSpace=wrap;fontFamily=Helvetica;" value="FIM" vertex="1">
+          <mxGeometry height="60" width="100" x="47" y="525" as="geometry" />
+        </mxCell>
+        <mxCell id="MigCzSZp2fgGJ_X8fslG-9" edge="1" parent="1" source="MigCzSZp2fgGJ_X8fslG-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Helvetica;" target="MigCzSZp2fgGJ_X8fslG-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="MigCzSZp2fgGJ_X8fslG-10" edge="1" parent="1" source="MigCzSZp2fgGJ_X8fslG-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Helvetica;" target="MigCzSZp2fgGJ_X8fslG-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="MigCzSZp2fgGJ_X8fslG-11" edge="1" parent="1" source="MigCzSZp2fgGJ_X8fslG-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Helvetica;" target="MigCzSZp2fgGJ_X8fslG-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="MigCzSZp2fgGJ_X8fslG-12" edge="1" parent="1" source="MigCzSZp2fgGJ_X8fslG-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Helvetica;" target="MigCzSZp2fgGJ_X8fslG-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="MigCzSZp2fgGJ_X8fslG-13" edge="1" parent="1" source="MigCzSZp2fgGJ_X8fslG-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Helvetica;" target="MigCzSZp2fgGJ_X8fslG-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="MigCzSZp2fgGJ_X8fslG-14" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontStyle=1;fontFamily=Helvetica;" value="4." vertex="1">
+          <mxGeometry height="50" width="70" x="210" y="35" as="geometry" />
+        </mxCell>
+        <mxCell id="MigCzSZp2fgGJ_X8fslG-15" parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_1;whiteSpace=wrap;fontFamily=Helvetica;" value="INICIO" vertex="1">
+          <mxGeometry height="60" width="100" x="258" y="45" as="geometry" />
+        </mxCell>
+        <mxCell id="MigCzSZp2fgGJ_X8fslG-16" parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.display;whiteSpace=wrap;fontFamily=Helvetica;" value="&quot;Insira o salário atual&quot;" vertex="1">
+          <mxGeometry height="80" width="136" x="240" y="135" as="geometry" />
+        </mxCell>
+        <mxCell id="MigCzSZp2fgGJ_X8fslG-17" parent="1" style="html=1;strokeWidth=2;shape=manualInput;boundedLbl=1;whiteSpace=wrap;rounded=1;size=26;arcSize=11;fontFamily=Helvetica;" value="S" vertex="1">
+          <mxGeometry height="60" width="100" x="258" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="MigCzSZp2fgGJ_X8fslG-18" parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;fontFamily=Helvetica;" value="NS&amp;lt;-S*1.25" vertex="1">
+          <mxGeometry height="60" width="120" x="248" y="325" as="geometry" />
+        </mxCell>
+        <mxCell id="MigCzSZp2fgGJ_X8fslG-19" parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.display;whiteSpace=wrap;fontFamily=Helvetica;" value="&quot;O novo salário será de: &quot;,NS" vertex="1">
+          <mxGeometry height="80" width="160" x="228" y="415" as="geometry" />
+        </mxCell>
+        <mxCell id="MigCzSZp2fgGJ_X8fslG-20" parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_1;whiteSpace=wrap;fontFamily=Helvetica;" value="FIM" vertex="1">
+          <mxGeometry height="60" width="100" x="258" y="525" as="geometry" />
+        </mxCell>
+        <mxCell id="MigCzSZp2fgGJ_X8fslG-21" edge="1" parent="1" source="MigCzSZp2fgGJ_X8fslG-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Helvetica;" target="MigCzSZp2fgGJ_X8fslG-16">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="MigCzSZp2fgGJ_X8fslG-22" edge="1" parent="1" source="MigCzSZp2fgGJ_X8fslG-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Helvetica;" target="MigCzSZp2fgGJ_X8fslG-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="MigCzSZp2fgGJ_X8fslG-23" edge="1" parent="1" source="MigCzSZp2fgGJ_X8fslG-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Helvetica;" target="MigCzSZp2fgGJ_X8fslG-18">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="MigCzSZp2fgGJ_X8fslG-24" edge="1" parent="1" source="MigCzSZp2fgGJ_X8fslG-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Helvetica;" target="MigCzSZp2fgGJ_X8fslG-19">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="MigCzSZp2fgGJ_X8fslG-25" edge="1" parent="1" source="MigCzSZp2fgGJ_X8fslG-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Helvetica;" target="MigCzSZp2fgGJ_X8fslG-20">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="MigCzSZp2fgGJ_X8fslG-26" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontStyle=1;fontFamily=Helvetica;" value="6." vertex="1">
+          <mxGeometry height="50" width="70" x="420" y="35" as="geometry" />
+        </mxCell>
+        <mxCell id="MigCzSZp2fgGJ_X8fslG-27" parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_1;whiteSpace=wrap;fontFamily=Helvetica;" value="INICIO" vertex="1">
+          <mxGeometry height="60" width="100" x="468" y="45" as="geometry" />
+        </mxCell>
+        <mxCell id="MigCzSZp2fgGJ_X8fslG-28" parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.display;whiteSpace=wrap;fontFamily=Helvetica;" value="&quot;Insira o salário base&quot;" vertex="1">
+          <mxGeometry height="80" width="136" x="450" y="135" as="geometry" />
+        </mxCell>
+        <mxCell id="MigCzSZp2fgGJ_X8fslG-29" parent="1" style="html=1;strokeWidth=2;shape=manualInput;boundedLbl=1;whiteSpace=wrap;rounded=1;size=26;arcSize=11;fontFamily=Helvetica;" value="S" vertex="1">
+          <mxGeometry height="60" width="100" x="468" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="MigCzSZp2fgGJ_X8fslG-30" parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;fontFamily=Helvetica;" value="SR&amp;lt;-S+(S*0.05)-(S*0.07)" vertex="1">
+          <mxGeometry height="60" width="170" x="433" y="325" as="geometry" />
+        </mxCell>
+        <mxCell id="MigCzSZp2fgGJ_X8fslG-31" parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.display;whiteSpace=wrap;fontFamily=Helvetica;" value="&quot;Salário a receber será: &quot;,SR" vertex="1">
+          <mxGeometry height="80" width="170" x="433" y="415" as="geometry" />
+        </mxCell>
+        <mxCell id="MigCzSZp2fgGJ_X8fslG-32" parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_1;whiteSpace=wrap;fontFamily=Helvetica;" value="FIM" vertex="1">
+          <mxGeometry height="60" width="100" x="468" y="525" as="geometry" />
+        </mxCell>
+        <mxCell id="MigCzSZp2fgGJ_X8fslG-33" edge="1" parent="1" source="MigCzSZp2fgGJ_X8fslG-27" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Helvetica;" target="MigCzSZp2fgGJ_X8fslG-28">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="MigCzSZp2fgGJ_X8fslG-34" edge="1" parent="1" source="MigCzSZp2fgGJ_X8fslG-28" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Helvetica;" target="MigCzSZp2fgGJ_X8fslG-29">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="MigCzSZp2fgGJ_X8fslG-35" edge="1" parent="1" source="MigCzSZp2fgGJ_X8fslG-29" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Helvetica;" target="MigCzSZp2fgGJ_X8fslG-30">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="MigCzSZp2fgGJ_X8fslG-36" edge="1" parent="1" source="MigCzSZp2fgGJ_X8fslG-30" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Helvetica;" target="MigCzSZp2fgGJ_X8fslG-31">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="MigCzSZp2fgGJ_X8fslG-37" edge="1" parent="1" source="MigCzSZp2fgGJ_X8fslG-31" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Helvetica;" target="MigCzSZp2fgGJ_X8fslG-32">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
