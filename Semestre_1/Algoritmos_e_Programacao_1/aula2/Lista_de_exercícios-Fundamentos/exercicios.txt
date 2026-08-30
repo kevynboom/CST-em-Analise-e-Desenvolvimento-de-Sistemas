@@ -1,0 +1,21 @@
+1) Peça ao usuário seu nome e idade. Mostre uma mensagem como: "Olá, João! Você tem 25 anos".
+2) Peça a base e a altura de um retângulo e calcule sua área.
+3) Solicite o raio de um círculo e calcule a área. (Use Área = π * raio² — considere π como 3.14)
+4) Solicite o valor da hora trabalhada e o total de horas no mês. Calcule o salário mensal.
+5) Solicite a idade em anos e converta para dias (desconsidere anos bissextos).
+6) Receba um valor em metros e converta para centímetros, milímetros e quilômetros.
+7) Solicite o valor de um produto e calcule o preço com 10% de desconto.
+8) Solicite o salário atual e calcule o novo salário com aumento de 15%. Informe também o valor monetário do aumento.
+9) Peça a distância percorrida e o tempo gasto. Calcule a velocidade média da viagem (Velocidade = distância / tempo).
+10) Solicite o capital, o tempo (t) (em meses) e a taxa de juros mensal (i). Calcule o montante usando juros simples: M = C * (1 + i * t)
+11) Peça um número inteiro e exiba seu antecessor e sucessor.
+12) Peça um número e mostre o dobro, o triplo e a raiz quadrada.
+13) Peça a cotação do dólar e um valor em dólar. Converta para reais.
+14) Solicite dois números inteiros e exiba o quociente inteiro e o resto da divisão entre eles.
+15) Peça a altura e a largura de uma parede e calcule quantos litros de tinta são necessários (Considere que 1 litro pinta 2 m²).
+16) Solicite a duração de uma viagem em horas e minutos. Exiba o total em minutos.
+17) Peça o valor total da conta e o número de pessoas. Calcule quanto cada um deve pagar.
+18) Peça um valor em minutos e converta para horas e minutos. Ex: 130 minutos → 2 horas e 10 minutos
+19) Solicite o valor de um produto e a taxa de imposto (%) a ser aplicada. Calcule o valor final.
+20) Peça ao usuário um valor inteiro representando uma quantidade de segundos. Converta esse valor para o formato horas, minutos e segundos e exiba o resultado. 
+Exemplo: Entrada: 3672 Saída: 1 hora(s), 1 minuto(s) e 12 segundo(s)
