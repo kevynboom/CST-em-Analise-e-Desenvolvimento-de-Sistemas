@@ -3,14 +3,12 @@ import java.util.Scanner;
 public class ex10 {
     public static void main(String[] args) {
         try(Scanner sc = new Scanner(System.in)) {
-            System.out.println("Digite o capital");
+            System.out.println("Digite o capital, o tempo (em meses) e a taxa de juros, separados por espaço:");
             double c = sc.nextDouble();
-            System.out.println("Digite o tempo em meses");
             double t = sc.nextDouble();
-            System.out.println("Digite a taxa de juros mensal");
             double i = sc.nextDouble();
-            double m = c*(1+i*t);
-            System.out.println("O montante será de "+m+".");
+            double m = c * (1 + i * t);
+            System.out.println("O montante será de " + m + ".");
         }
     }
 }
