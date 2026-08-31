@@ -8,8 +8,8 @@ public class ex3 {
             double raio = sc.nextDouble();
 
             double pi = 3.14;
-            double area = pi*(raio*raio);
-            
+            double area = pi*(raio*raio); // Ou "Math.PI*Math.pow(raio,2);"
+
             System.out.println("A área do seu círculo é de "+area+" cm².");
         }
     }

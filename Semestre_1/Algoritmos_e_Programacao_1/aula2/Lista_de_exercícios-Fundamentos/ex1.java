@@ -10,7 +10,8 @@ public class ex1 {
             System.out.println("Insira a sua idade");
             int idade = sc.nextInt();
             
-            System.out.println("Olá " + nome +"! Você tem " + idade + " anos de idade!");
+            System.out.println("Olá, " + nome +"! Você tem " + idade + " anos de idade!");
+            // System.out.printf("Olá, %s! Você tem %d anos de idade!", nome, idade); // Saída formatada
         }      
     }
 }

@@ -8,17 +8,20 @@ public class Ex1Media {
         String nomeAluno; // Texto
         double num1, num2, num3, num4, media; // Numeros reais e variavel dos numeros a receber e da operação
 
-        try (Scanner sc = new Scanner(System.in)) { // Atribuindo scanner (entrada de dados via teclado) a variavel "sc" para uso
+        try(Scanner sc = new Scanner(System.in)) { // Atribuindo scanner (entrada de dados via teclado) a variavel "sc" para uso
 
             System.out.println("Insira o nome do aluno"); // texto para usuario pelo console
             nomeAluno = sc.nextLine (); // Recebendo entrada e atribuindo dentro da variavel respectiva
-            System.out.println("Insira as 4 notas do aluno (Digite uma nota e aperte Enter, depois repita para cada nota)");
+
+            System.out.println("Insira as 4 notas do aluno (Separadas por espaço)");
             num1 = sc.nextDouble();
             num2 = sc.nextDouble();
             num3 = sc.nextDouble();
             num4 = sc.nextDouble();
+
+            media = (num1 + num2 + num3 + num4)/4; // Processamento da media
+
+            System.out.println("A média do aluno " + nomeAluno + " é de " + media + " pontos");
         }
-        media = (num1 + num2 + num3 + num4)/4; // Processamento da media
-        System.out.println("A média do aluno " + nomeAluno + " é de " + media + " pontos");
     } 
 }
