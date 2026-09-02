@@ -78,69 +78,67 @@ FIM_ALGORITMO.
 
 6) Faça um programa que receba o salário base e o tempo de serviço de um funcionário. Calcule e mostre:
 (Consule informações no slide)
-O código está correto e atende perfeitamente a todas as regras da tabela. Segue a versão com a identação (espaçamentos) ajustada para melhor visualização:
 ALGORITMO
-DECLARE SALARIO, TEMPO, IMPOSTO, GRATIFICACAO, SALARIO_LIQUIDO NUMÉRICO
-DECLARE CATEGORIA LITERAL
-ESCREVA "Insira o salário base"
-LEIA SALARIO
-ESCREVA "Insira o tempo de serviço (em anos)"
-LEIA TEMPO
-SE SALARIO < 200
+DECLARE SB,TS,IMP,GRA,SL NUMÉRICO
+ESCREVA "INSIRA O SALÁRIO BASE"
+LEIA SB
+ESCREVA "INSIRA O TEMPO DE SERVIÇO"
+LEIA TS
+SE SB<200.0
 ENTÃO INÍCIO
-    IMPOSTO <- 0
+    IMP<-0
 FIM
-SENÃO SE SALARIO <= 450
+SENÃO SE SB>=200 E SV<=450
 ENTÃO INÍCIO
-    IMPOSTO <- SALARIO * 0.03
+    IMP<-0.03*SB
 FIM
-SENÃO SE SALARIO < 700
+SENÃO SE SB>450 E SB<700
 ENTÃO INÍCIO
-    IMPOSTO <- SALARIO * 0.08
+    IMP<-0.08*SB
 FIM
 SENÃO INÍCIO
-    IMPOSTO <- SALARIO * 0.12
+    IMP<-0.12*SB
 FIM
-SE SALARIO > 500
+SE SB>500
 ENTÃO INÍCIO
-    SE TEMPO <= 3
+    SE TS<3
     ENTÃO INÍCIO
-        GRATIFICACAO <- 20
+        GRA<-0.2*SB
     FIM
     SENÃO INÍCIO
-        GRATIFICACAO <- 30
+        GRA<-0.3*SB
     FIM
 FIM
 SENÃO INÍCIO
-    SE TEMPO <= 3
+    SE TS<3
     ENTÃO INÍCIO
-        GRATIFICACAO <- 23
+        GRA<-0.23*SB
     FIM
-    SENÃO SE TEMPO < 6
+    SENÃO SE TS>=3 E TS<6
     ENTÃO INÍCIO
-        GRATIFICACAO <- 35
+        GRA<-0.35*SB
     FIM
     SENÃO INÍCIO
-        GRATIFICACAO <- 33
+        GRA<-0.33*SB
     FIM
 FIM
-SALARIO_LIQUIDO <- SALARIO - IMPOSTO + GRATIFICACAO
-SE SALARIO_LIQUIDO <= 350
+SL<-SB+GRA-IMP
+SE SL<350
+ESCREVA "IMPOSTO",IMP
+ESCREVA "GRATIFICAÇÃO",GRA
+ESCREVA "SALÁRIO LÍQUIDO",SL
 ENTÃO INÍCIO
-    CATEGORIA <- "A"
+    ESCREVA "CLASSIFICAÇÃO A"
 FIM
-SENÃO SE SALARIO_LIQUIDO <= 600
+SENÃO SE SL>=350 E SL<600
 ENTÃO INÍCIO
-    CATEGORIA <- "B"
+    ESCREVA "CLASSIFICAÇÃO B"
 FIM
 SENÃO INÍCIO
-    CATEGORIA <- "C"
+    ESCREVA "CLASSIFICAÇÃO C"
 FIM
-ESCREVA "O imposto é: ", IMPOSTO
-ESCREVA "A gratificação é: ", GRATIFICACAO
-ESCREVA "O salário líquido é: ", SALARIO_LIQUIDO
-ESCREVA "A categoria é: ", CATEGORIA
 FIM_ALGORITMO.
+
 
 7) Faça um programa que receba:
 o código do estado de origem da carga de um caminhão, supondo que a digitação do código do estado
