@@ -1,0 +1,264 @@
+LISTA DE EXERCÍCIOS 5 - 02/09/26 (Nome no BlackBoard é "Lista de Exercícios 4", está na seção "Aulas")
+
+1) Cada degrau de uma escada tem X de altura. Faça um programa que receba essa altura e a altura
+que o usuário deseja alcançar subindo a escada, calcule e mostre quantos degraus ele deverá subir
+para atingir seu objetivo, sem se preocupar com a altura do usuário. Todas as medidas fornecidas
+devem estar em metros.
+ALGORITMO
+DECLARE altura_degrau, altura_subida, degraus NUMÉRICO
+ESCREVA "Insira a altura da escada e a altura que deseja alcançar, tudo em metros"
+LEIA, altura_degrau, altura_subida
+degraus <- altura_subida / altura_degrau
+ESCREVA "Você deverá subir ", degraus, " degraus."
+FIM_ALGORITMO.
+
+2) Faça um programa que receba a medida do ângulo (em graus) formado por uma escada apoiada no chão e encostada na parede e a altura da parede onde está a ponta da escada. Calcule e
+mostre a medida dessa escada.
+Observação: as funções trigonométricas implementadas nas linguagens de programação trabalham
+com medidas de ângulos em radianos.
+ALGORITMO
+DECLARE ANGULO, ALTURA, RADIANOS, ESCADA, PI NUMÉRICO
+PI <- 3.1415
+ESCREVA "Insira a medida do ângulo em graus"
+LEIA ANGULO
+ESCREVA "Insira a altura da parede"
+LEIA ALTURA
+RADIANOS <- ANGULO * PI / 180
+ESCADA <- ALTURA / SEN(RADIANOS)
+ESCREVA "A medida da escada é: ", ESCADA
+FIM_ALGORITMO.
+
+3) Uma pessoa deseja pregar um quadro em uma parede. Faça um programa para calcular e mostrar
+a que distância a escada deve estar da parede. A pessoa deve fornecer o tamanho da escada e a
+altura em que deseja pregar o quadro.
+Lembre-se de que o tamanho da escada deve ser maior que a altura que se deseja alcançar.
+ALGORITMO
+DECLARE ESCADA, ALTURA, DISTANCIA NUMÉRICO
+ESCREVA "Insira o tamanho da escada"
+LEIA ESCADA
+ESCREVA "Insira a altura em que deseja pregar o quadro"
+LEIA ALTURA
+SE ESCADA > ALTURA
+ENTÃO INÍCIO
+    DISTANCIA <- (ESCADA**2 - ALTURA**2)(1.0/2.0)
+ESCREVA "A distância da escada até a parede é: ", DISTANCIA
+FIM
+SENÃO INÍCIO
+    ESCREVA "O tamanho da escada deve ser maior que a altura desejada."
+FIM
+FIM_ALGORITMO.
+
+4) Faça um programa que receba um número real, encontre e mostre:
+a) a parte inteira desse número;
+b) a parte fracionária desse número;
+c) o arredondamento desse número.
+ALGORITMO
+DECLARE NUM, INTEIRA, FRACIONARIA, ARREDONDADO NUMÉRICO
+ESCREVA "Insira um número real"
+LEIA NUM
+INTEIRA <- INT(NUM)
+FRACIONARIA <- NUM - INTEIRA
+ARREDONDADO <- ARRED(NUM)
+ESCREVA "Parte inteira = ", INTEIRA
+ESCREVA "Parte fracionária = ", FRACIONARIA
+ESCREVA "Arredondamento = ", ARREDONDADO
+FIM_ALGORITMO.
+
+5) Faça um programa que receba o custo de um espetáculo teatral e o preço do convite desse espetáculo. Esse programa deverá calcular e mostrar a quantidade de convites que devem ser vendidos
+para que, pelo menos, o custo do espetáculo seja alcançado.
+ALGORITMO
+DECLARE CUSTO, PRECO, QTD NUMÉRICO
+ESCREVA "Insira o custo do espetáculo"
+LEIA CUSTO
+ESCREVA "Insira o preço do convite"
+LEIA PRECO
+QTD <- CUSTO / PRECO
+ESCREVA "A quantidade de convites a ser vendida é: ", ARRED(QTD + 0.5)
+FIM_ALGORITMO.
+
+6) Faça um programa que receba o salário base e o tempo de serviço de um funcionário. Calcule e mostre:
+(Consule informações no slide)
+O código está correto e atende perfeitamente a todas as regras da tabela. Segue a versão com a identação (espaçamentos) ajustada para melhor visualização:
+ALGORITMO
+DECLARE SALARIO, TEMPO, IMPOSTO, GRATIFICACAO, SALARIO_LIQUIDO NUMÉRICO
+DECLARE CATEGORIA LITERAL
+ESCREVA "Insira o salário base"
+LEIA SALARIO
+ESCREVA "Insira o tempo de serviço (em anos)"
+LEIA TEMPO
+SE SALARIO < 200
+ENTÃO INÍCIO
+    IMPOSTO <- 0
+FIM
+SENÃO SE SALARIO <= 450
+ENTÃO INÍCIO
+    IMPOSTO <- SALARIO * 0.03
+FIM
+SENÃO SE SALARIO < 700
+ENTÃO INÍCIO
+    IMPOSTO <- SALARIO * 0.08
+FIM
+SENÃO INÍCIO
+    IMPOSTO <- SALARIO * 0.12
+FIM
+SE SALARIO > 500
+ENTÃO INÍCIO
+    SE TEMPO <= 3
+    ENTÃO INÍCIO
+        GRATIFICACAO <- 20
+    FIM
+    SENÃO INÍCIO
+        GRATIFICACAO <- 30
+    FIM
+FIM
+SENÃO INÍCIO
+    SE TEMPO <= 3
+    ENTÃO INÍCIO
+        GRATIFICACAO <- 23
+    FIM
+    SENÃO SE TEMPO < 6
+    ENTÃO INÍCIO
+        GRATIFICACAO <- 35
+    FIM
+    SENÃO INÍCIO
+        GRATIFICACAO <- 33
+    FIM
+FIM
+SALARIO_LIQUIDO <- SALARIO - IMPOSTO + GRATIFICACAO
+SE SALARIO_LIQUIDO <= 350
+ENTÃO INÍCIO
+    CATEGORIA <- "A"
+FIM
+SENÃO SE SALARIO_LIQUIDO <= 600
+ENTÃO INÍCIO
+    CATEGORIA <- "B"
+FIM
+SENÃO INÍCIO
+    CATEGORIA <- "C"
+FIM
+ESCREVA "O imposto é: ", IMPOSTO
+ESCREVA "A gratificação é: ", GRATIFICACAO
+ESCREVA "O salário líquido é: ", SALARIO_LIQUIDO
+ESCREVA "A categoria é: ", CATEGORIA
+FIM_ALGORITMO.
+
+7) Faça um programa que receba:
+o código do estado de origem da carga de um caminhão, supondo que a digitação do código do estado
+seja sempre válida, isto é, um número inteiro entre 1 e 5;
+o peso da carga do caminhão em toneladas;
+o código da carga, supondo que a digitação do código seja sempre válida, isto é, um número inteiro
+entre 10 e 40.
+(Consule tabelas no slide)
+ALGORITMO
+DECLARE COD_E,COD_C,PESO,IMP,PQ,TOTAL NUMÉRICO
+ESCREVA "INSIRA O CÓDIGO DO ESTADO"
+LEIA COD_E
+ESCREVA "INSIRA O CÓDIGO DA CARGA"
+LEIA COD_C
+ESCREVA "INSIRA O PESO DA CARGA"
+LEIA PESO
+PESO<-PESO/1000.0
+SE COD_C>=10 E COD_C<=20
+ENTÃO INÍCIO
+    PQ<-100*PESO
+FIM
+SENÃO SE COD_C>=21 E COD_C<=30
+ENTÃO INÍCIO
+    PQ<-250*PESO
+FIM
+SENÃO INÍCIO
+    PQ<-340*PESO
+FIM
+SE COD_E = 1
+ENTÃO INÍCIO
+    IMP<-PQ*0.35
+FIM
+SENÃO SE COD_E = 2
+ENTÃO INÍCIO
+    IMP<-PQ*0.25
+FIM
+SENÃO SE COD_E = 3
+ENTÃO INÍCIO
+    IMP<-PQ*0.15
+FIM
+SENÃO SE COD_E = 4
+ENTÃO INÍCIO
+    IMP<-PQ*0.05
+FIM
+SENÃO INÍCIO
+    IMP<-0
+FIM
+TOTAL<-PQ+IMP
+ESCREVA "TOTAL A PAGAR", TOTAL
+FIM_ALGORITMO.
+
+8) Faça um programa que receba a altura e o peso de uma pessoa. De acordo com a tabela a seguir,
+verifique e mostre a classificação dessa pessoa.
+(Consule tabela no slide)
+ALGORITMO
+DECLARE ALT, PESO NUMERICO
+ESCREVA "INSIRA OS VALORES DE ALTURA E PESO"
+LEIA ALT, PESO
+SE PESO<60
+ENTÃO INÍCIO
+    SE ALT<1.2
+    ENTÃO INÍCIO
+        ESCREVA "A"
+    FIM
+    SENÃO SE ALT>=1.2 E ALT<1.7
+    ENTÃO INÍCIO
+        ESCREVA "B"
+    FIM
+    SENÃO INÍCIO
+        ESCREVA "C"
+    FIM
+FIM
+SENÃO SE PESO>-60 E PESO<90
+ENTÃO INÍCIO
+    SE ALT<1.2
+    ENTÃO INÍCIO
+        ESCREVA "D"
+    FIM
+    SENÃO SE ALT>=1.2 E ALT<1.7
+    ENTÃO INÍCIO
+        ESCREVA "E"
+    FIM
+    SENÃO INÍCIO
+        ESCREVA "F"
+    FIM
+FIM
+SENÃO INÍCIO
+    SE ALT<1.2
+    ENTÃO INÍCIO
+        ESCREVA "G"
+    FIM
+    SENÃO SE ALT>=1.2 E ALT<=1.7
+    ENTÃO INÍCIO
+        ESCREVA "H"
+    FIM
+    SENÃO INÍCIO
+        ESCREVA "I"
+    FIM
+FIM
+FIM_ALGORITMO
+
+9) Faça um programa para resolver equações do 2 o grau.
+ALGORITMO
+DECLARE x1,x2, a, b, c, delta, NUMÉRICO
+LEIA a, b, c 
+DELTA<- b*b-4*a*c
+SE delta>0
+ENTÃO INÍCIO
+    x1 <- (-b+POT(delta, 1.0/2.0))/(2*a)
+    x2 <- (-b-POT(delta, 1.0/2.0))/(2*a)
+    ESCREVA "Solução: ", x1, x2
+FIM
+SENÃO SE delta=0
+ENTÃO INÍCIO
+    X1 <- (-b/(2*a))
+    ESCREVA "Solução: ", x1
+FIM
+SENÃO INÍCIO
+    ESCREVA "Não tem solução real"
+FIM
+FIM_ALGORITMO.
