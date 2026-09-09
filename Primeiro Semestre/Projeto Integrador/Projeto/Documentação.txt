@@ -18,7 +18,8 @@ FUNÇÕES PREVISTAS:
 - 3 Listar produtos;
 - 4 Editar produto;
 - 5 Pesquisar produto específico;
-- 6 Calcular valor total do estoque;
+- 6 Verificar produtos com estoque baixo;
+- 7 Calcular valor total do estoque;
 - 0 Sair do programa.
 
 ESTRUTURA PREVISTA DA CLASSE "PRODUTOS":
