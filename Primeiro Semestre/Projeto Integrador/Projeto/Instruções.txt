@@ -1,0 +1,15 @@
+TEMA: 
+Sistema de gerenciamento de produtos
+
+SOBRE:
+Os alunos deverão realizar várias entregas sobre dado projeto com seu grupo, cujo tema é um sistema de gerenciamento de produtos (estoque).
+
+ENTREGAS
+Entrega 1 - 30/09/26:
+Parte "teórica", tema do sistema, como funciona, contextualização, etc...
+
+Entrega 2 - 28/10/26:
+Lógica do sistema em fluxograma e pseudocódigo.
+
+Entrega Final - 28/11/26:
+Sistema em sí funcionando em JAVA.

@@ -1,0 +1,29 @@
+GRUPO: 
+Kevyn, Educiano e André.
+
+SOBRE O NOSSO SISTEMA: 
+- Ramo Alimentício (Frutas, legumes e vegetais).
+Será um sistema de gerenciamento de estoque para um pequeno hortifruti, onde o vendedor poderá consultar quais e quantos produtos ele possuí para venda 
+e também poderá gerenciar os mesmos, podendo adicionar, remover, consultar e editar os produtos de seu estoque. 
+
+TECNOLOGIAS JAVA A SEREM UTILIZADAS:
+- Prints no terminal para o usuário;
+- Entrada de dados via Scanner;
+- Estruturas de condição e de repetição;
+- Variáveis e arrays (para guardar informações e também consultá-las).
+
+FUNÇÕES PREVISTAS:
+- 1 Adicionar produto;
+- 2 Remover produto;
+- 3 Listar produtos;
+- 4 Editar produto;
+- 5 Pesquisar produto específico;
+- 6 Calcular valor total do estoque;
+- 0 Sair do programa.
+
+ESTRUTURA PREVISTA DA CLASSE "PRODUTOS":
+- int código;
+- String nome;
+- String categoria;
+- int quantidade;
+- double preço;
