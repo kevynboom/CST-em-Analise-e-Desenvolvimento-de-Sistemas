@@ -70,9 +70,9 @@ public class Lista2 {
 
     // Peça dois números e informe qual é o maior. 
     public static void ex3(Scanner sc) {
-        System.out.println("Digite dois números: ");
-        double num1 = sc.nextDouble();
-        double num2 = sc.nextDouble();
+        System.out.println("Digite dois números inteiros: ");
+        int num1 = sc.nextInt();
+        int num2 = sc.nextInt();
         if (num1 > num2) {
             System.out.println("O primeiro número é maior.");
         } else if (num1 == num2){
@@ -160,10 +160,10 @@ public class Lista2 {
 
     // Solicite três lados e verifique se formam um triângulo válido. (Soma de dois lados deve ser maior que o terceiro) 
     public static void ex10(Scanner sc) {
-        System.out.println("Digite a medida em cm dos três lados do triângulo: ");
-        double a = sc.nextDouble();
-        double b = sc.nextDouble();
-        double c = sc.nextDouble();
+        System.out.println("Digite a medida em cm (n° inteiro) dos três lados do triângulo: ");
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+        int c = sc.nextInt();
         if (a + b > c && a + c > b && b + c > a) {
             System.out.println("É um triângulo!");
         } else {
@@ -173,17 +173,45 @@ public class Lista2 {
 
     // Se for triângulo válido, diga se é equilátero, isósceles ou escaleno. 
     public static void ex11(Scanner sc) {
-
+        System.out.println("Digite a medida em cm (n° inteiro) dos três lados do triângulo: ");
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+        int c = sc.nextInt();
+        if (a + b > c && a + c > b && b + c > a) {
+            if ( a == b && b == c && a == c) {
+                System.out.println("É um triângulo equilátero!");
+            } else if (a == b || b == c || c == a) {
+                System.out.println("É um triângulo isósceles!");
+            } else {
+                System.out.println("É um triângulo escaleno!");
+            }
+        } else {
+            System.out.println("Não é um triângulo...");
+        }
     }
 
     // Consulte no BlackBoard
     public static void ex12(Scanner sc) {
-
+        System.out.println("Digite o valor da compra: ");
+        double valor = sc.nextDouble();
+        if (valor > 500) {
+            double desconto10 = valor * 0.9;
+            System.out.printf("O preço da compra será de R$%.2f.", desconto10);
+        } else if (valor >= 200) {
+            double desconto5 = valor * 0.95 ;
+            System.out.printf("O preço da compra será de R$%.2f.", desconto5);
+        } else {
+            System.out.printf("O preço da compra será de R$%.2f.", valor);
+        }
     }
 
     // Leia três números e mostre-os em ordem crescente (sem usar sort). 
     public static void ex13(Scanner sc) {
-
+        System.out.println("Digite três números: ");
+        double num1 = sc.nextDouble();
+        double num2 = sc.nextDouble();
+        double num3 = sc.nextDouble();
+        
     }
 
     // Consulte no BlackBoard
