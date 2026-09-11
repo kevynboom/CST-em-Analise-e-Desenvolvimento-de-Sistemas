@@ -1,6 +1,5 @@
 import java.util.Scanner;
-/*  Só usei IA para CORRIGIR os ex's quando eu havia terminado ou, quando estava com muita dificuldade, 
-a usei para me GUIAR na resolução, sem que ela me desse a respota. */
+
 public class Lista2 {
     public static void main(String[] args) {
         int opcao;
@@ -77,7 +76,7 @@ public class Lista2 {
         if (num1 > num2) {
             System.out.println("O primeiro número é maior.");
         } else if (num1 == num2){
-            System.out.println("Os número são iguais!");
+            System.out.println("Os números são iguais!");
         } else {
         System.out.println("O segundo número é maior.");
         }
@@ -85,7 +84,7 @@ public class Lista2 {
 
     // Solicite três números e mostre qual é o maior. 
     public static void ex4(Scanner sc) {
-        System.out.println("Digite três números: ");
+        System.out.println("Digite três números diferentes: ");
         double num1 = sc.nextDouble();
         double num2 = sc.nextDouble();
         double num3 = sc.nextDouble();
@@ -96,7 +95,7 @@ public class Lista2 {
         } else if (num3 > num1 && num3 > num2) {
             System.out.println("O terceiro número é maior.");
         } else {
-            System.out.println("Existem números iguais entre os maiores!");
+            System.out.println("Digite números diferentes, não foi programado um tratamento para números iguais.");
         }
     }
 
@@ -213,15 +212,15 @@ public class Lista2 {
         double num2 = sc.nextDouble();
         double num3 = sc.nextDouble();
         // Sem usar sort é sacanagem...
-        if (num1 < num2 && num2 < num3) {
+        if (num1 <= num2 && num2 <= num3) {
             System.out.printf("A ordem crescente é: %.2f, %.2f, %.2f", num1, num2, num3);
-        } else if (num1 < num3 && num3 < num2) {
+        } else if (num1 <= num3 && num3 <= num2) {
             System.out.printf("A ordem crescente é: %.2f, %.2f, %.2f", num1, num3, num2);
-        } else if (num2 < num1 && num1 < num3) {
+        } else if (num2 <= num1 && num1 <= num3) {
             System.out.printf("A ordem crescente é: %.2f, %.2f, %.2f", num2, num1, num3);
-        } else if (num2 < num3 && num3 < num1) {
+        } else if (num2 <= num3 && num3 <= num1) {
             System.out.printf("A ordem crescente é: %.2f, %.2f, %.2f", num2, num3, num1);
-        } else if (num3 < num1 && num1 < num2) {
+        } else if (num3 <= num1 && num1 <= num2) {
             System.out.printf("A ordem crescente é: %.2f, %.2f, %.2f", num3, num1, num2);
         } else {
             System.out.printf("A ordem crescente é: %.2f, %.2f, %.2f", num3, num2, num1);
@@ -246,23 +245,24 @@ public class Lista2 {
     }
 
     // Peça dois números e uma operação (+, -, *, /). Execute a operação. 
-    public static void ex15(Scanner sc) { // Quebrei a cabeça nesse exercício XD
+    public static void ex15(Scanner sc) {
+        // (Quebrei a cabeça nesse exercício XD)
         System.out.println("Digite dois números: ");
         double x = sc.nextDouble();
         double y = sc.nextDouble();
         System.out.println("Digite um operador (+, -, *, /): ");
         String operador = sc.next();
-        double z; // Variável para resultado
+        double z;
         switch (operador) {
-            case "+" -> z = x + y; // Faz soma
-            case "-" -> z = x - y; // Faz subtração
-            case "*" -> z = x * y; // Faz multiplicação
+            case "+" -> z = x + y; 
+            case "-" -> z = x - y;
+            case "*" -> z = x * y; 
             case "/" -> {
                 while (y == 0) {
                     System.out.println("Não é possível dividir por zero! Digite outro divisor: ");
                     y = sc.nextDouble();
                 } 
-                z = x / y; // Se o divisor não for zero, saí do loop e executa a divisão
+                z = x / y;
             }
             default -> {
                 System.out.println("Operador inválido!");
@@ -274,57 +274,218 @@ public class Lista2 {
 
     // Peça três números e informe se o terceiro é igual ao primeiro ou ao segundo.
     public static void ex16(Scanner sc) {
-
+        System.out.println("Digite três números inteiros: ");
+        int num1 = sc.nextInt();
+        int num2 = sc.nextInt();
+        int num3 = sc.nextInt();
+        if (num3 == num1 && num3 == num2) {
+            System.out.println("O terceiro número é igual ao primeiro e ao segundo número!");
+        } else if (num3 == num1) {
+            System.out.println("O terceiro número é igual ao primeiro número apenas.");
+        } else if (num3 == num2) {
+            System.out.println("O terceiro número é igual ao segundo número apenas.");
+        } else {
+            System.out.println("Não há números iguais...");
+        }
     }
 
     // Informe se dois números têm a mesma paridade (ambos pares ou ambos ímpares). 
     public static void ex17(Scanner sc) {
-
+    System.out.println("Digite dois números inteiros: ");
+    int num1 = sc.nextInt();
+    int num2 = sc.nextInt();
+    if (num1 % 2 == num2 % 2) {
+        System.out.println("Os dois números têm a mesma paridade!");
+    } else {
+        System.out.println("Os números têm paridades diferentes.");
     }
+}
 
     // Verifique se um ano é bissexto (divisível por 4, mas não por 100, exceto se divisível por 400). 
     public static void ex18(Scanner sc) {
-
+        System.out.println("Digite um ano: ");
+        int ano = sc.nextInt();
+        if ((ano % 4 == 0 && ano % 100 != 0) || (ano % 400 == 0)) {
+            System.out.println("É um ano bissexto!");
+        } else {
+            System.out.println("Não é um ano bissexto...");
+        }
     }
 
     // Leia peso e altura e classifique o IMC como: Abaixo do peso (<18.5), Normal (18.5 a 24.9), Sobrepeso (25 a 29.9), Obesidade (30 ou mais).
     public static void ex19(Scanner sc) {
-
+        System.out.println("Digite seu peso e sua altura: ");
+        double peso = sc.nextDouble();
+        double altura = sc.nextDouble();
+        double imc = peso / (altura*altura);
+        if (imc < 18.5) {
+            System.out.printf("Seu IMC é de: %.2f, Você está abaixo do peso recomendado.", imc);
+        } else if (imc <= 24.9) {
+            System.out.printf("Seu IMC é de: %.2f, Você está dentro do peso!", imc);
+        } else if (imc <= 29.9) {
+            System.out.printf("Seu IMC é de: %.2f, Você está com sobrepeso.", imc);
+        } else {
+            System.out.printf("Seu IMC é de: %.2f, Você está com obesidade...", imc);
+        }
     }
 
     // Classifique um número em positivo ou negativo, par ou ímpar, e inteiro ou decimal. 
     public static void ex20(Scanner sc) {
-
+        System.out.println("Digite um número qualquer: ");
+        double numero = sc.nextDouble();
+        String sinal;
+        String tipo;
+        String paridade;
+        if (numero > 0) {
+            sinal = "positivo";
+        } else if (numero < 0) {
+            sinal = "negativo";
+        } else {
+            sinal = "neutro";
+        }
+        if (numero % 1 == 0) {
+            tipo = "inteiro";
+            if (numero % 2 == 0) {
+                paridade = "par";
+            } else {
+                paridade = "ímpar";
+            }
+        } else {
+            tipo = "decimal";
+            paridade = "não se aplica";
+        }
+        System.out.printf("Sobre o número: %.2f%nSinal: %s%nTipo: %s%nParidade: %s%n", numero, sinal, tipo, paridade);
     }
 
-    // Implemente um programa que exiba um menu com opções de café da manhã e o usuário deve escolher uma opção 
-    // (1 - Pão com manteiga, 2 - Café com leite, 3 - Suco de laranja, 4 - Omelete). O programa deve exibir a escolha feita. 
+    // Implemente um programa que exiba um menu com opções de café da manhã e o usuário deve escolher uma opção
+    // (1 - Pão com manteiga, 2 - Café com leite, 3 - Suco de laranja, 4 - Omelete). O programa deve exibir a escolha feita.
     public static void ex21(Scanner sc) {
-
+        System.out.println("----- CAFÉ DA MANHÃ -----");
+        System.out.println("1 - Pão com manteiga");
+        System.out.println("2 - Café com leite");
+        System.out.println("3 - Suco de laranja");
+        System.out.println("4 - Omelete");
+        System.out.print("Escolha uma opção: ");
+        int opcao = sc.nextInt();
+        switch (opcao) {
+            case 1 -> System.out.println("Você escolheu Pão com manteiga!");
+            case 2 -> System.out.println("Você escolheu Café com leite!");
+            case 3 -> System.out.println("Você escolheu Suco de laranja!");
+            case 4 -> System.out.println("Você escolheu Omelete!");
+            default -> System.out.println("Opção inválida!");
+        }
     }
 
-    // Crie uma calculadora simples que permite ao usuário escolher entre soma, subtração, multiplicação ou divisão. 
-    // O programa deve pedir dois números e realizar a operação escolhida. 
+    // Crie uma calculadora simples que permite ao usuário escolher entre soma, subtração, multiplicação ou divisão.
+    // O programa deve pedir dois números e realizar a operação escolhida.
     public static void ex22(Scanner sc) {
-
+        // Mesma coisa do ex. 15??
+        System.out.println("Digite dois números: ");
+        double num1 = sc.nextDouble();
+        double num2 = sc.nextDouble();
+        System.out.println("Digite a operação (+, -, *, /): ");
+        String operador = sc.next();
+        switch (operador) {
+            case "+" -> System.out.printf("Resultado: %.2f.", num1 + num2);
+            case "-" -> System.out.printf("Resultado: %.2f.", num1 - num2);
+            case "*" -> System.out.printf("Resultado: %.2f.", num1 * num2);
+            case "/" -> {
+                if (num2 == 0) {
+                    System.out.println("Não é possível dividir por zero!");
+                } else {
+                    System.out.printf("Resultado: %.2f.", num1 / num2);
+                }
+            }
+            default -> System.out.println("Operador inválido!");
+        }
     }
 
-    // Crie um programa onde o usuário deve escolher um tipo de transporte 
-    // (1 - Carro, 2 - Bicicleta, 3 - Ônibus, 4 - Avião) e o programa exibe a velocidade média do transporte escolhido. 
+    // Crie um programa onde o usuário deve escolher um tipo de transporte
+    // (1 - Carro, 2 - Bicicleta, 3 - Ônibus, 4 - Avião) e o programa exibe a velocidade média do transporte escolhido.
     public static void ex23(Scanner sc) {
-
+        System.out.println("----- TRANSPORTES -----");
+        System.out.println("1 - Carro");
+        System.out.println("2 - Bicicleta");
+        System.out.println("3 - Ônibus");
+        System.out.println("4 - Avião");
+        System.out.print("Escolha uma opção: ");
+        int opcao = sc.nextInt();
+        switch (opcao) {
+            case 1 -> System.out.println("Carro - Velocidade média: 80 km/h.");
+            case 2 -> System.out.println("Bicicleta - Velocidade média: 20 km/h.");
+            case 3 -> System.out.println("Ônibus - Velocidade média: 60 km/h.");
+            case 4 -> System.out.println("Avião - Velocidade média: 900 km/h.");
+            default -> System.out.println("Opção inválida!");
+        }
     }
 
-    // Crie um programa que converta um valor informado pelo usuário de uma moeda para outras moedas (por exemplo: 1 - Dólar, 2 - Euro, 3 - Real). 
-    // O programa deve mostrar o valor convertido com base na cotação atual. 
-    public static void ex24(Scanner sc) {
-
+    // Crie um programa que converta um valor informado pelo usuário de uma moeda para outras moedas.
+    // O programa deve mostrar o valor convertido com base na cotação atual.
+    public static void ex24(Scanner sc) {   
+        // Outro exercício que a lógica me pegou bastante XD
+        System.out.println("Digite o valor: ");
+        double valor = sc.nextDouble();
+        System.out.println("Escolha a moeda de origem: ");
+        System.out.println("1 - Real");
+        System.out.println("2 - Dólar");
+        System.out.println("3 - Euro");
+        System.out.print("Opção: ");
+        int origem = sc.nextInt();
+        System.out.println("Escolha a moeda de destino: ");
+        System.out.println("1 - Real");
+        System.out.println("2 - Dólar");
+        System.out.println("3 - Euro");
+        System.out.print("Opção: ");
+        int destino = sc.nextInt();
+        double valorEmReais;
+        // Suponho que não precisava implementar uma API de cotação aqui...
+        switch (origem) {
+            case 1 -> valorEmReais = valor;
+            case 2 -> valorEmReais = valor * 5.12; // Cotação em: 11/09/26 às 16h22m
+            case 3 -> valorEmReais = valor * 5.94; // Cotação em: 11/09/26 às 16h22m
+            default -> {
+                System.out.println("Moeda de origem inválida!");
+                return;
+            }
+        }
+        switch (destino) {
+            case 1 -> System.out.printf("Valor em real: R$%.2f.", valorEmReais);
+            case 2 -> System.out.printf("Valor em dólar: US$%.2f.", valorEmReais / 5.12); // Cotação em: 11/09/26 às 16h22m
+            case 3 -> System.out.printf("Valor em euro: €%.2f.", valorEmReais / 5.94); // Cotação em: 11/09/26 às 16h22m
+            default -> System.out.println("Moeda de destino inválida!");
+        }
     }
 
-    // Implemente um programa onde o usuário escolhe uma figura geométrica (1 - Círculo, 2 - Quadrado, 3 - Retângulo) 
-    // e o programa pede as medidas necessárias para calcular a área da figura escolhida.      
+    // Implemente um programa onde o usuário escolhe uma figura geométrica (1 - Círculo, 2 - Quadrado, 3 - Retângulo)
+    // e o programa pede as medidas necessárias para calcular a área da figura escolhida.
     public static void ex25(Scanner sc) {
-        
+        System.out.println("----- FIGURAS GEOMÉTRICAS -----");
+        System.out.println("1 - Círculo");
+        System.out.println("2 - Quadrado");
+        System.out.println("3 - Retângulo");
+        System.out.print("Escolha uma opção: ");
+        int opcao = sc.nextInt();
+        switch (opcao) {
+            case 1 -> {
+                System.out.println("Digite o raio do círculo: ");
+                double raio = sc.nextDouble();
+                double area = Math.PI * raio * raio;
+                System.out.printf("A área do círculo é de %.2f cm².", area);
+            }
+            case 2 -> {
+                System.out.println("Digite o lado do quadrado: ");
+                double lado = sc.nextDouble();
+                double area = lado * lado;
+                System.out.printf("A área do quadrado é de %.2f cm².", area);
+            }
+            case 3 -> {
+                System.out.println("Digite a base e a altura do retângulo: ");
+                double base = sc.nextDouble();
+                double altura = sc.nextDouble();
+                double area = base * altura;
+                System.out.printf("A área do retângulo é de %.2f cm².", area);
+            }
+            default -> System.out.println("Opção inválida!");
+        }
     }
-
 }
