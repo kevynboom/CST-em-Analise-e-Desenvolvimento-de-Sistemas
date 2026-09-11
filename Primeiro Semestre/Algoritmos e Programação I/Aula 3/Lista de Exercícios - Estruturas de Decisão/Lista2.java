@@ -190,7 +190,7 @@ public class Lista2 {
         }
     }
 
-    // Consulte no BlackBoard
+    // Dado o valor da compra, aplique: 10% de desconto se for maior que R$500, 5% se for entre R$200 e R$500, nenhum desconto se for abaixo de R$200. 
     public static void ex12(Scanner sc) {
         System.out.println("Digite o valor da compra: ");
         double valor = sc.nextDouble();
@@ -211,12 +211,37 @@ public class Lista2 {
         double num1 = sc.nextDouble();
         double num2 = sc.nextDouble();
         double num3 = sc.nextDouble();
-        
+        // Sem usar sort é sacanagem...
+        if (num1 < num2 && num2 < num3) {
+            System.out.printf("A ordem crescente é: %.2f, %.2f, %.2f", num1, num2, num3);
+        } else if (num1 < num3 && num3 < num2) {
+            System.out.printf("A ordem crescente é: %.2f, %.2f, %.2f", num1, num3, num2);
+        } else if (num2 < num1 && num1 < num3) {
+            System.out.printf("A ordem crescente é: %.2f, %.2f, %.2f", num2, num1, num3);
+        } else if (num2 < num3 && num3 < num1) {
+            System.out.printf("A ordem crescente é: %.2f, %.2f, %.2f", num2, num3, num1);
+        } else if (num3 < num1 && num1 < num2) {
+            System.out.printf("A ordem crescente é: %.2f, %.2f, %.2f", num3, num1, num2);
+        } else {
+            System.out.printf("A ordem crescente é: %.2f, %.2f, %.2f", num3, num2, num1);
+        }
     }
 
-    // Consulte no BlackBoard
+    // Converta uma nota numérica (0 a 10) para conceitos: A (≥9), B (≥8), C (≥7), D (≥6), E (<6). 
     public static void ex14(Scanner sc) {
-
+        System.out.println("Digite a nota do aluno: ");
+        double nota = sc.nextDouble();
+        if (nota >= 9) {
+            System.out.println("A nota deste aluno é A!");
+        } else if (nota >= 8) {
+            System.out.println("A nota deste aluno é B!");
+        } else if (nota >= 7) {
+            System.out.println("A nota deste aluno é C.");
+        } else if (nota >= 6) {
+            System.out.println("A nota deste aluno é D.");
+        } else {
+            System.out.println("A nota deste aluno é E...");
+        }
     }
 
     // Peça dois números e uma operação (+, -, *, /). Execute a operação. 
@@ -239,7 +264,7 @@ public class Lista2 {
 
     }
 
-    // Consulte no BlackBoard
+    // Leia peso e altura e classifique o IMC como: Abaixo do peso (<18.5), Normal (18.5 a 24.9), Sobrepeso (25 a 29.9), Obesidade (30 ou mais).
     public static void ex19(Scanner sc) {
 
     }
