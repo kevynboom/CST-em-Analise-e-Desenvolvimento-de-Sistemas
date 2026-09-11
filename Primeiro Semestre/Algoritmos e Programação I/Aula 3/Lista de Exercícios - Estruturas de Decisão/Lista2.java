@@ -1,5 +1,6 @@
 import java.util.Scanner;
-
+/*  Só usei IA para CORRIGIR os ex's quando eu havia terminado ou, quando estava com muita dificuldade, 
+a usei para me GUIAR na resolução, sem que ela me desse a respota. */
 public class Lista2 {
     public static void main(String[] args) {
         int opcao;
@@ -245,8 +246,30 @@ public class Lista2 {
     }
 
     // Peça dois números e uma operação (+, -, *, /). Execute a operação. 
-    public static void ex15(Scanner sc) {
-
+    public static void ex15(Scanner sc) { // Quebrei a cabeça nesse exercício XD
+        System.out.println("Digite dois números: ");
+        double x = sc.nextDouble();
+        double y = sc.nextDouble();
+        System.out.println("Digite um operador (+, -, *, /): ");
+        String operador = sc.next();
+        double z; // Variável para resultado
+        switch (operador) {
+            case "+" -> z = x + y; // Faz soma
+            case "-" -> z = x - y; // Faz subtração
+            case "*" -> z = x * y; // Faz multiplicação
+            case "/" -> {
+                while (y == 0) {
+                    System.out.println("Não é possível dividir por zero! Digite outro divisor: ");
+                    y = sc.nextDouble();
+                } 
+                z = x / y; // Se o divisor não for zero, saí do loop e executa a divisão
+            }
+            default -> {
+                System.out.println("Operador inválido!");
+                return;
+            }
+        }
+        System.out.printf("Resultado: %.2f.", z);
     }
 
     // Peça três números e informe se o terceiro é igual ao primeiro ou ao segundo.
