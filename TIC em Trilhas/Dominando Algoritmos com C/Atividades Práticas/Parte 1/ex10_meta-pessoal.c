@@ -7,7 +7,7 @@
 // Considere que, após descontar as despesas, o programa deve reservar automaticamente 30% do valor restante como economia fixa, e que o valor que 
 // sobrar após essa reserva poderá ser destinado mensalmente para alcançar a meta.
 int main() {
-    setlocal(LC_ALL, "");
+    setlocale(LC_ALL, "");
 
 
 

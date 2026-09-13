@@ -6,7 +6,7 @@
 // em segundos que ele completou a primeira volta. O programa deve calcular a distância total da corrida em quilômetros e a previsão de 
 // tempo em minutos que ele concluirá a corrida se manter seu tempo de volta.
 int main() {
-    setlocal(LC_ALL, "");
+    setlocale(LC_ALL, "");
 
 
 

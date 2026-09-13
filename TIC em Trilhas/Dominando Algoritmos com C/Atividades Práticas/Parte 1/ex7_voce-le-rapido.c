@@ -4,7 +4,7 @@
 
 // 7. Faça um programa que calcule o tempo que um livro será lido por uma pessoa a partir do nome do livro, do total de páginas e do tempo em segundos de leitura por página.
 int main() {
-    setlocal(LC_ALL, "");
+    setlocale(LC_ALL, "");
 
 
 

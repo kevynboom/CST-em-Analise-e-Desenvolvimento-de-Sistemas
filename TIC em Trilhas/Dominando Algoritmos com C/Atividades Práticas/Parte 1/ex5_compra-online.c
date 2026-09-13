@@ -4,7 +4,7 @@
 
 // 5. Faça um programa para calcular o valor final de uma compra, a partir do valor da compra e do cupom de desconto. O cupom diz a porcentagem do desconto.
 int main() {
-    setlocal(LC_ALL, "");
+    setlocale(LC_ALL, "");
 
 
 
