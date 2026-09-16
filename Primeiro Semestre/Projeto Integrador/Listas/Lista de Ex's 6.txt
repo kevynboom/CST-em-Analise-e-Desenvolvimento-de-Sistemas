@@ -6,7 +6,17 @@ b) Em 2006, ele recebeu aumento de 1,5% sobre seu salário inicial.
 c) A partir de 2007 (inclusive), os aumentos salariais sempre corresponderam ao dobro do percentual
 do ano anterior.
 Faça um programa que determine o salário atual desse funcionário.
-
+ALGORITMO
+DECLARE ANO,SALARIO,PERCENTUAL NUMÉRICO
+SALARIO<-1000
+PERCENTUAL<-1.5
+PARA ANO<-2006 ATÉ 2026 FAÇA
+INÍCIO
+    SALARIO<-SALARIO+(SALARIO*PERCENTUAL/100)
+    PERCENTUAL<-PERCENTUAL*2
+FIM
+ESCREVA "O salário atual é: R$",SALARIO
+FIM_ALGORITMO.
 
 2) Foi feita uma estatística em cinco cidades brasileiras para coletar dados sobre acidentes de trânsito.
 Foram obtidos os seguintes dados:
@@ -17,12 +27,58 @@ Deseja-se saber:
 a) qual é o maior e qual é o menor índice de acidentes de trânsito e a que cidades pertencem;
 b) qual é a média de veículos nas cinco cidades juntas;
 c) qual é a média de acidentes de trânsito nas cidades com menos de 2.000 veículos de passeio.
-
+ALGORITMO
+DECLARE C_CID,NV,NA,MAIOR_ACI,MENOR_ACI,MV,MA NUMÉRICO
+MV<-0
+MA<-0
+MAIOR_ACI = -999
+MENOR_ACI = 9999
+PARA C_CID <- 1 ATÉ 5 FAÇA
+INÍCIO
+    ESCREVA "INSIRA O NÚMERO DE VEÍCULOS"
+    LEIA NV
+    ESCREVA "INSIRA O NÚMERO DE ACIDENTES"
+    LEIA NA
+    MV<-MV+NV
+    MA<-MA+NA
+    SE MENOR_ACI<NA ENTÃO
+    INÍCIO
+        MENOR_ACI<-MENOR_ACI
+    FIM
+    SE MAIOR_ACI>NA ENTÃO
+    INÍCIO
+        MAIOR_ACI<-NA
+    FIM
+FIM
 
 3) Faça um programa que leia o número de termos, determine e mostre os valores de acordo com a
 série a seguir:
 Série = 2, 7, 3, 4, 21, 12, 8, 63, 48, 16, 189, 192, 32, 567, 768...
-
+ALGORITMO
+DECLARE N,I,A,B,C NUMÉRICO
+ESCREVA "INSIRA O NÚMERO DE TERMOS"
+LEIA N
+A<-2
+B<-7
+C<-3
+PARA I<-1 ATÉ N FAÇA
+INÍCIO
+    SE I MOD 3=1
+    ENTÃO INÍCIO
+        ESCREVA A
+        A<-A*2
+    FIM
+    SENÃO SE I MOD 3=2
+    ENTÃO INÍCIO
+        ESCREVA B
+        B<-B*3
+    FIM
+    SENÃO INÍCIO
+        ESCREVA C
+        C<-C*4
+    FIM
+FIM
+FIM_ALGORITMO.
 
 4) Faça um programa que receba duas notas de seis alunos. Calcule e mostre:
 a média aritmética das duas notas de cada aluno; e
@@ -34,25 +90,161 @@ o total de alunos aprovados;
 o total de alunos de exame;
 o total de alunos reprovados;
 a média da classe.
-
+ALGORITMO
+DECLARE NOTA, PROVA, ALUNO, MEDIA, TA, TE, TR, MEDIA_TURMA NUMÉRICO
+TA<-0
+TE<-0
+TR<-0
+MEDIA_TURMA<-0
+PARA ALUNO<-1 ATÉ 6 FAÇA
+INÍCIO
+    MEDIA<-0
+    PARA NOTA<-1 ATÉ 2 FAÇA
+    INÍCIO
+        ESCREVA "INSIRA A NOTA"
+        LEIA PROVA
+        MEDIA<-MEDIA+PROVA
+    FIM
+    MEDIA<-MEDIA/2
+    MEDIA_TURMA<-MEDIA_TURMA+MEDIA
+    SE MEDIA<3 ENTÃO
+    INÍCIO
+        TR<-TR+1
+        ESCREVA "REPROVADO"
+        ESCREVA "MEDIA",MEDIA
+    FIM
+    SENÃO SE MEDIA>=3 E MEDIA<7
+    INÍCIO
+        TE<-TE+1
+        ESCREVA "EXAME"
+        ESCREVA "MEDIA",MEDIA
+    FIM
+    SENÃO
+    INÍCIO
+        TA<-TA+1
+        ESCREVA "APROVADO"
+        ESCREVA "MEDIA",MEDIA
+    FIM
+FIM
+ESCREVA "TOTAL DE APROVADOS",TA
+ESCREVA "TOTAL DE EXAME",TE
+ESCREVA "TOTAL DE REPROVADOS",TR
+MEDIA_TURMA<-MEDIA_TURMA/6
+ESCREVA "MEDIA DA TURMA",MEDIA_TURMA
 
 5) Em um campeonato de futebol existem cinco times e cada um possui onze jogadores. Faça um programa que receba a idade, o peso e a altura de cada um dos jogadores, calcule e mostre:
 a quantidade de jogadores com idade inferior a 18 anos;
 a média das idades dos jogadores de cada time;
 a média das alturas de todos os jogadores do campeonato; e
 a porcentagem de jogadores com mais de 80 kg entre todos os jogadores do campeonato.
-
+ALGORITMO
+DECLARE TIME, JOGADOR, IDADE, ALTURA, PESO, T80, Q18, MI, MAL NUMÉRICO
+MAL<-0
+Q18<-0
+T80<-0
+PARA TIME<-1 ATÉ 5 FAÇA
+INÍCIO
+    MI<-0
+    PARA JOGADOR<-1 ATÉ 11 FAÇA
+    INÍCIO
+        ESCREVA "INSIRA PESO"
+        LEIA PESO
+        ESCREVA "INSIRA ALTURA"
+        LEIA ALTURA
+        ESCREVA "INSIRA IDADE"
+        LEIA IDADE
+        MI<-MI+IDADE
+        MAL<-MAL+ALTURA
+        SE PESO > 80 ENTÃO
+        INÍCIO
+            T80<-T80+1
+        FIM
+        SE IDADE<18 ENTÃO
+        INÍCIO
+            Q18<-Q18+1
+        FIM
+    FIM
+    MI<-MI/11
+    ESCREVA "MEDIA DE IDADE DO TIME", MI
+FIM
+MAL<-MAL/55
+ESCREVA "MÉDIA DE ALTURA",MAL
+ESCREVA "QUANTIDADE DE JOGADORES MENORES DE 18 ANOS", Q18
+T80<-T80/55
+ESCREVA "PORCENTAGEM DE JOGADORES ACIMA DE 80KG",T80
+FIM_ALGORITMO
 
 6) Faça um programa que receba um número inteiro maior que 1, verifique se o número fornecido é primo ou não e mostre uma mensagem de número primo ou de número não primo. 
 Um número é primo quando é divisível apenas por 1 e por ele mesmo.
-
+ALGORITMO
+DECLARE N,I,PRIMO NUMÉRICO
+ESCREVA "INSIRA UM NÚMERO MAIOR QUE 1"
+LEIA N
+PRIMO<-1
+PARA I<-2 ATÉ N-1 FAÇA
+INÍCIO
+    SE N MOD I=0
+    ENTÃO INÍCIO
+        PRIMO<-0
+    FIM
+FIM
+SE PRIMO=1
+ENTÃO INÍCIO
+    ESCREVA "O NÚMERO É PRIMO"
+FIM
+SENÃO INÍCIO
+    ESCREVA "O NÚMERO NÃO É PRIMO"
+FIM
+FIM_ALGORITMO.
 
 7) Faça um programa para calcular a área de um triângulo e que não permita a entrada de dados inválidos, ou seja, medidas menores ou iguais a 0.1
-
+ALGORITMO
+DECLARE BASE,ALTURA,AREA NUMÉRICO
+REPITA
+INÍCIO
+    ESCREVA "INSIRA A BASE DO TRIÂNGULO"
+    LEIA BASE
+    ESCREVA "INSIRA A ALTURA DO TRIÂNGULO"
+    LEIA ALTURA
+    SE BASE<=0.1 OU ALTURA<=0.1
+    ENTÃO INÍCIO
+        ESCREVA "VALORES INVÁLIDOS"
+    FIM
+FIM
+ATÉ (BASE>0.1 E ALTURA>0.1)
+AREA<-BASE*ALTURA/2
+ESCREVA "A ÁREA DO TRIÂNGULO É: ",AREA
+FIM_ALGORITMO.
 
 8) Faça um programa que leia um conjunto não determinado de valores e mostre o valor lido, seu quadrado, seu cubo e sua raiz quadrada. 
 Finalize a entrada de dados com um valor negativo ou zero.
-
+ALGORITMO
+DECLARE N,Q,C,R NUMÉRICO
+REPITA
+INÍCIO
+    ESCREVA "INSIRA O VALOR"
+    LEIA N
+    Q<-N*N
+    C<-N*N*N
+    R<-POT(N,1.0/2.0)
+    ESCREVA "NUMERO", N, "QUADRADO", Q
+    ESCREVA "CUBO", C, "RAIZ", R
+FIM
+ATÉ (N<=0)
+FIM_ALGORITMO
 
 9) Faça um programa que leia um número não determinado de pares de valores [m,n], todos inteiros e positivos, um par de cada vez, 
 e que calcule e mostre a soma de todos os números inteiros entre m e n (inclusive). A digitação de pares terminará quando m for maior ou igual a n.
+ALGORITMO
+DECLARE M,N,I,SOMA NUMÉRICO
+REPITA
+SOMA<-0
+ESCREVA "INSIRA O INTERVALO"
+LEIA M,N
+PARA I<-M ATÉ N FAÇA
+INÍCIO
+    SOMA<-SOMA+I
+FIM
+ESCREVA "SOMA", SOMA
+ATÉ (M>=N)
+FIM_ALGORITMO.
