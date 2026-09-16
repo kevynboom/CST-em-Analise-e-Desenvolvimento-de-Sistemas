@@ -28,3 +28,6 @@ ESTRUTURA PREVISTA DA CLASSE "PRODUTOS":
 - String categoria;
 - int quantidade;
 - double preço;
+
+O que falta escrever:
+- Lógica de aplicação dos impostos de cada tipo de alimento.

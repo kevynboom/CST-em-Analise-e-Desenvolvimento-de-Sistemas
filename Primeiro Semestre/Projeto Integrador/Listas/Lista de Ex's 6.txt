@@ -1,0 +1,58 @@
+LISTA DE EXERCÍCIOS 5 - 16/09/26 (Nome no BlackBoard é "Lista de Exercícios 5", está na seção "Aulas")
+
+1) Um funcionário de uma empresa recebe, anualmente, aumento salarial. Sabe-se que:
+a) Esse funcionário foi contratado em 2005, com salário inicial de R$ 1.000,00.
+b) Em 2006, ele recebeu aumento de 1,5% sobre seu salário inicial.
+c) A partir de 2007 (inclusive), os aumentos salariais sempre corresponderam ao dobro do percentual
+do ano anterior.
+Faça um programa que determine o salário atual desse funcionário.
+
+
+2) Foi feita uma estatística em cinco cidades brasileiras para coletar dados sobre acidentes de trânsito.
+Foram obtidos os seguintes dados:
+a) código da cidade;
+b) número de veículos de passeio;
+c) número de acidentes de trânsito com vítimas.
+Deseja-se saber:
+a) qual é o maior e qual é o menor índice de acidentes de trânsito e a que cidades pertencem;
+b) qual é a média de veículos nas cinco cidades juntas;
+c) qual é a média de acidentes de trânsito nas cidades com menos de 2.000 veículos de passeio.
+
+
+3) Faça um programa que leia o número de termos, determine e mostre os valores de acordo com a
+série a seguir:
+Série = 2, 7, 3, 4, 21, 12, 8, 63, 48, 16, 189, 192, 32, 567, 768...
+
+
+4) Faça um programa que receba duas notas de seis alunos. Calcule e mostre:
+a média aritmética das duas notas de cada aluno; e
+a mensagem que está na tabela a seguir:
+até 3 reprovado
+entre 3 e 7 exame
+de 7 para cima aprovado
+o total de alunos aprovados;
+o total de alunos de exame;
+o total de alunos reprovados;
+a média da classe.
+
+
+5) Em um campeonato de futebol existem cinco times e cada um possui onze jogadores. Faça um programa que receba a idade, o peso e a altura de cada um dos jogadores, calcule e mostre:
+a quantidade de jogadores com idade inferior a 18 anos;
+a média das idades dos jogadores de cada time;
+a média das alturas de todos os jogadores do campeonato; e
+a porcentagem de jogadores com mais de 80 kg entre todos os jogadores do campeonato.
+
+
+6) Faça um programa que receba um número inteiro maior que 1, verifique se o número fornecido é primo ou não e mostre uma mensagem de número primo ou de número não primo. 
+Um número é primo quando é divisível apenas por 1 e por ele mesmo.
+
+
+7) Faça um programa para calcular a área de um triângulo e que não permita a entrada de dados inválidos, ou seja, medidas menores ou iguais a 0.1
+
+
+8) Faça um programa que leia um conjunto não determinado de valores e mostre o valor lido, seu quadrado, seu cubo e sua raiz quadrada. 
+Finalize a entrada de dados com um valor negativo ou zero.
+
+
+9) Faça um programa que leia um número não determinado de pares de valores [m,n], todos inteiros e positivos, um par de cada vez, 
+e que calcule e mostre a soma de todos os números inteiros entre m e n (inclusive). A digitação de pares terminará quando m for maior ou igual a n.
