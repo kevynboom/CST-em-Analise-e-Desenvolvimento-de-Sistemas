@@ -2,7 +2,7 @@
 #include <locale.h>
 
 int main() {
-    setlocal(LC_ALL, "");
+    setlocale(LC_ALL, "");
 
     int resultado = 2 + 3 * 4;
     printf("O resultado de 2 + 3 * 4 eh: %d\n", resultado);

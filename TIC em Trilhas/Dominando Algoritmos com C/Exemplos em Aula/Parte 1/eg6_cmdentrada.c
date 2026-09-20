@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <string.h> // Biblioteca para o "fgets" (aparentemente)
 #include <locale.h>
 
 int main(){

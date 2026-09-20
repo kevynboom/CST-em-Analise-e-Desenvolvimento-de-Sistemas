@@ -1,14 +1,14 @@
-#include <stdio.h>   // Para entrada e saída de dados
-#include <stdlib.h>  // Para usar o atoi (conversão de String para int)
-#include <locale.h>  // Suporte à localização do sistema
+#include <stdio.h>
+#include <locale.h>
 
+// 1. Faça um programa que apresente um estudante universitário considerando seu nome, curso que estuda, semestre atual e seu hobby favorito.
 int main() {
-    setlocale(LC_ALL, ""); // Config para linguagem estrangeira
-    // Variaveis
+    setlocale(LC_ALL, "");
+
+    // Variáveis
     char nome[50];
     char curso[50];
-    char semestreString[10]; // String usada para receber o semestre antes da coversão
-    int semestre; // Após conversão ficará aqui
+    int semestre;
     char hobby[50];
 
     printf("Digite o seu nome: ");
@@ -18,8 +18,9 @@ int main() {
     fgets(curso, sizeof(curso), stdin);
 
     printf("Digite apenas o número correspondente ao semestre em que você está no momento: ");
-    fgets(semestreString, sizeof(semestreString), stdin);
-    semestre = atoi(semestreString); // Converte o texto para int
+    scanf("%d", &semestre);
+
+    while (getchar() != '\n'); // Limpa o '\n' deixado pelo scanf
 
     printf("Digite o seu hobby favorito: ");
     fgets(hobby, sizeof(hobby), stdin);

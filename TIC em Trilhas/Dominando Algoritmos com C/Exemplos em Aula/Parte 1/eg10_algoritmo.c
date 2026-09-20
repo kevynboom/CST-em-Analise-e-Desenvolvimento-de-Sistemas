@@ -2,7 +2,7 @@
 #include <locale.h>
 
 int main() {
-    setlocal(LC_ALL, "");
+    setlocale(LC_ALL, "");
 
     // 1 - Entrada de Dados
     float valorTotalConta;
@@ -13,7 +13,7 @@ int main() {
     scanf("%f", &valorTotalConta);
     
     printf("A conta será dividida por quantas pessoas? ");
-    scanf("%f", &totalPessoas);
+    scanf("%d", &totalPessoas);
     
     // 2 - Processamento dos Dados
     // O cérebro do programa. Realizamos os cálculos aqui

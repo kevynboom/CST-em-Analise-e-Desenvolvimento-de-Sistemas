@@ -1,9 +1,7 @@
 // Só transcrevendo código, pois eu já usava comentários antes dessa aula XD
 
-//Inclui a biblioteca padrão de entrada e saída
-#include <stdio.h>
-//Inclui a biblioteca de "localização" a qual permite usar config de idioma
-#include <locale.h>
+#include <stdio.h> //Inclui a biblioteca padrão de entrada
+#include <locale.h> //Inclui a biblioteca de "localização" a qual permite usar config de idioma
 
 // Função principal: Ponto de entrada do programa
 int main(){
