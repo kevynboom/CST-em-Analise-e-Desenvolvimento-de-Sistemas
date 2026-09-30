@@ -49,7 +49,7 @@ INÍCIO
     INÍCIO
         MAIOR_ACI<-NA
     FIM
-FIM
+FIM_ALGORITMO.
 
 3) Faça um programa que leia o número de termos, determine e mostre os valores de acordo com a
 série a seguir:
@@ -131,6 +131,7 @@ ESCREVA "TOTAL DE EXAME",TE
 ESCREVA "TOTAL DE REPROVADOS",TR
 MEDIA_TURMA<-MEDIA_TURMA/6
 ESCREVA "MEDIA DA TURMA",MEDIA_TURMA
+FIM_ALGORITMO.
 
 5) Em um campeonato de futebol existem cinco times e cada um possui onze jogadores. Faça um programa que receba a idade, o peso e a altura de cada um dos jogadores, calcule e mostre:
 a quantidade de jogadores com idade inferior a 18 anos;
