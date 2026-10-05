@@ -1,1 +1,0 @@
-Uma pasta pra eu testar programas/algoritmos aleatórios em cada linguagem.
