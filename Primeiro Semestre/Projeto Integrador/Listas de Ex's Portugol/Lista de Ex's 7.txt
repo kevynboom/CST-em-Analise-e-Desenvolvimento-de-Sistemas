@@ -1,0 +1,115 @@
+LISTA DE EXERCÍCIOS 7 - 07/10/26 (Nome no BlackBoard é "Lista de Exercícios 6", está na seção "Aulas")
+
+1) Faça um programa que preencha um vetor com nove números inteiros, calcule e mostre os números
+primos e suas respectivas posições.
+ALGORITMO
+DECLARE I,J,DIVISORES A[9] NUMÉRICO
+PARA I<-1 ATÉ 9 FAÇA
+INÍCIO
+    ESCREVA "INSIRA OS NÚMEROS"
+    LEIA X[I]
+FIM
+ESCREVA "NÚMEROS PRIMOS"
+PARA I<-1 ATÉ 9 FAÇA
+INÍCIO
+    DIVISORES <- 0
+    PARA J<-1 ATÉ A[I] FAÇA
+    INÍCIO
+        SE A[I] MOD J == 0 ENTÃO
+        INÍCIO
+            DIVISORES<-DIVISORES+1
+        FIM
+    FIM
+    SE DIVISORES == 2 ENTÃO
+    INÍCIO
+        ESCREVA "NÚMERO PRIMO", A[I], "POSIÇÃO ", I
+    FIM
+FIM
+FIM_ALGORITMO.
+
+5) Faça um programa que receba o número sorteado por um dado em vinte jogadas. Mostre os
+números sorteados e a frequência com que apareceram.
+ALGORITMO
+DECLARE I,DADO[20],C1,C2,C3,C4,C5,C6 NUMÉRICO
+ESCREVA "INSIRA OS VALORES SORTEADOS"
+PARA I<-1 ATÉ 20 FAÇA
+INÍCIO
+    LEIA DADOS[I]
+FIM
+C1<-0
+C2<-0
+C3<-0
+C4<-0
+C5<-0
+C6<-0
+PARA I <-1 ATÉ 20 FAÇA
+INÍCIO
+    SE DADO[I]==1 ENTÃO
+    INÍCIO
+        C1<-C1+1
+    FIM
+    SENÃO SE DADO[I]==2 ENTÃO
+    INÍCIO
+        C2<-C2+1
+    FIM
+    SENÃO SE DADO[I]==3 ENTÃO
+    INÍCIO
+        C3<-C3+1
+    FIM
+    SENÃO SE DADO[I]==4 ENTÃO
+    INÍCIO
+        C4<-C4+1
+    FIM
+    SENÃO SE DADO[I]==5 ENTÃO
+    INÍCIO
+        C5<-C5+1
+    FIM
+    SENÃO
+    INÍCIO
+        C6<-C6+1
+    FIM
+FIM
+ESCREVA "TOTAL DE VALORES 1",C1
+ESCREVA "TOTAL DE VALORES 2",C2
+ESCREVA "TOTAL DE VALORES 3",C3
+ESCREVA "TOTAL DE VALORES 4",C4
+ESCREVA "TOTAL DE VALORES 5",C5
+ESCREVA "TOTAL DE VALORES 6",C6
+FIN_ALGORITMO.
+
+6) Faça um programa que leia um vetor com cinco posições para números reais e, depois, um código
+inteiro. Se o código for zero, finalize o programa; se for 1, mostre o vetor na ordem direta; se for 2,
+mostre o vetor na ordem inversa.
+ALGORITMO
+DECLARE I,V[5],OP NUMÉRICO
+ESCREVA "INSIRA OS VALORES NO VETOR"
+PARA I<-1 ATÉ 5 FAÇA
+INÍCIO
+	LEIA V[I]
+FIM
+ESCREVA "EXIBIR O VETOR ORDEM DIRETA - 1 "
+ESCREVA "EXIBIR O VETOR ORDEM INVERSA - 2"
+ESCREVA "SAIR - 0"
+LEIA OP
+ENQUANTO(OP==1 OU OP==2) FAÇA
+INÍCIO
+	SE OP==1 ENTÃO
+	INÍCIO
+		PARA I<-1 ATÉ 5 FAÇA
+		INÍCIO
+			ESCREVA V[I]
+		FIM
+	FIM
+	SENÃO
+	INÍCIO
+		PARA I<-5 ATÉ 1 FAÇA
+		INÍCIO
+			ESCREVA V[I]
+		FIM
+	FIM
+	ESCREVA "EXIBIR O VETOR ORDEM DIRETA - 1 "
+	ESCREVA "EXIBIR O VETOR ORDEM INVERSA - 2"
+	ESCREVA "SAIR - 0"
+	LEIA OP
+
+FIM
