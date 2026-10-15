@@ -2,6 +2,7 @@ CREATE DATABASE kevynboom;
 
 USE kevynboom;
 
+-- Template do Professor
 CREATE TABLE vendedores (
     codigoVendedor INT PRIMARY KEY,
     nome VARCHAR(50),
@@ -59,3 +60,25 @@ CREATE TABLE ItemPedidos (
         FOREIGN KEY (codigoPedido)
         REFERENCES Pedidos(codigoPedido)
 );
+
+-- Exemplos do Professor
+ALTER TABLE clientes ADD statusCliente BIT;
+
+ALTER TABLE clientes DROP COLUMN statusCliente;
+
+ALTER TABLE clientes MODIFY statusCliente CHAR(2);
+
+ALTER TABLE clientes CHANGE statusCliente stcliente BIT; 
+
+ALTER TABLE clientes RENAME TO pessoas;
+ALTER TABLE pessoas RENAME TO clientes; 
+
+DESC cliente;
+
+SHOW KEYS FROM clientes;
+
+SHOW TABLES;
+
+SHOW COLUMNS FROM clientes;
+
+SHOW INDEX FROM clientes;
