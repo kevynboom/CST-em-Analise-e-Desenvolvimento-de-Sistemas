@@ -75,14 +75,12 @@ public class Lista3 {
         char caractere;
         int contador = 0;
         System.out.println("---------- EXERCÍCIO 01 ----------");
-        System.out.println("---------- ENTRADA DE DADOS ----------");
         System.out.println("Digite caracteres mas apenas um por vez.");
         System.out.println("Ou digite apenas \".\" para parar e contar os caracteres digitados): ");
         do { 
             caractere = sc.next().charAt(0);
             contador++;
         } while (caractere != '.');
-        System.out.println("---------- SAÍDA DE DADOS ----------");
         System.out.printf("Foram digitados %d caracteres", --contador);
     }
 
@@ -92,7 +90,6 @@ public class Lista3 {
         int qtdVogais = 0;
         sc.nextLine(); // Limpando buffer
         System.out.println("---------- EXERCÍCIO 02 ----------");
-        System.out.println("---------- ENTRADA DE DADOS ----------");
         System.out.print("Digite uma palavra: ");
         palavra = sc.nextLine().toLowerCase();
         palavra = Normalizer.normalize(palavra, Normalizer.Form.NFD).replaceAll("\\p{M}", ""); // Para tranformar letras com acentos em normais
@@ -102,7 +99,6 @@ public class Lista3 {
                 qtdVogais++;
             } 
         }
-        System.out.println("---------- SAÍDA DE DADOS ----------");
         System.out.printf("Quantidade de vogais na palavra \"%s\": %d", palavra, qtdVogais);
     }
 
@@ -110,12 +106,10 @@ public class Lista3 {
     public static void ex03 () {
         sc.nextLine(); // Limpando buffer
         System.out.println("---------- EXERCÍCIO 03 ----------");
-        System.out.println("---------- ENTRADA DE DADOS ----------");
         System.out.print("Digite uma palavra: ");
         String palavra = sc.nextLine();
         System.out.println("Quantas vezes você quer que essa palavra seja repetida?");
         int n = sc.nextInt();
-        System.out.println("---------- SAÍDA DE DADOS ----------");
         for (int i = 0; i < n; i++) {
             System.out.println(palavra);
         } 
@@ -125,13 +119,10 @@ public class Lista3 {
     public static void ex04 () {
         sc.nextLine(); // Limpando buffer
         System.out.println("---------- EXERCÍCIO 04 ----------");
-        System.out.println("---------- ENTRADA DE DADOS ----------");
         System.out.print("Digite uma frase: ");
         String frase = sc.nextLine();
         while (!frase.equalsIgnoreCase("sair")) { 
-            System.out.println("---------- SAÍDA DE DADOS ----------");
             System.out.printf("Você disse: \"%s\"\n", frase);
-            System.out.println("---------- ENTRADA DE DADOS ----------");
             System.out.print("Digite outra frase (ou \"sair\" para parar o ex.): ");
             frase = sc.nextLine();
         }
@@ -142,7 +133,6 @@ public class Lista3 {
     public static void ex05 () {
         sc.nextLine(); // Limpando buffer
         System.out.println("---------- EXERCÍCIO 05 ----------");
-        System.out.println("---------- ENTRADA DE DADOS ----------");
         System.out.print("Digite um nome: ");
         String nome = sc.nextLine();
         int tamanho = nome.length();
@@ -151,13 +141,23 @@ public class Lista3 {
             nome = sc.nextLine();
             tamanho = nome.length();
         }
-        System.out.println("---------- SAÍDA DE DADOS ----------");
         System.out.printf("O nome digitado foi: \"%s\"", nome);
     }
 
     // Solicite uma senha e peça confirmação até que ambas coincidam.
     public static void ex06 () {
-        
+        sc.nextLine(); // Limpando buffer
+        System.out.println("---------- EXERCÍCIO 06 ----------");
+        System.out.print("Digite uma senha: ");
+        String senha = sc.nextLine();
+        System.out.printf("Confirme a senha: ");
+        String confirmarSenha = sc.nextLine();
+        while (!confirmarSenha.equals(senha)) { 
+            System.out.println("Acesso negado!");
+            System.out.print("Confirme a senha novamente: ");
+            confirmarSenha = sc.nextLine();
+        }
+        System.out.println("Acesso liberado!");
     }
 
     // Número fixo oculto. O usuário tem até 5 tentativas para adivinhar.
