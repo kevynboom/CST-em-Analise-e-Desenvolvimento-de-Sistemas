@@ -1,14 +1,14 @@
 import java.text.Normalizer;
 import java.util.Random;
 import java.util.Scanner;
-// Salve professor! Essa lista eu quis fazer bem mais completinha pois eu queria treinar mais, 
-// então cheguei até pesquisar certas funções diferentes que o java tem para fazer certas coisas que
-// será possível observar ao longo da lista, como o uso do Runnable :D
+// Salve professor! Essa lista eu quis fazer bem mais completinha pois eu queria treinar mais, então será
+// possível notar coisas não aplicadas nas aulas mas que pesquisei a parte pra aprender a usar (como o uso do Runnable).
+// Código feito sem IA generativa!
 public class Lista3 {
     // Váriaveis Globais
     static Scanner sc = new Scanner(System.in);
     static Random rand = new Random();
-    // ---------- MÉTODOS PRINCIPAL (MENU) ----------
+    // ---------- MÉTODO PRINCIPAL (MENU) ----------
     public static void main(String[] args) {
         int opcao;
         do {
@@ -48,11 +48,11 @@ public class Lista3 {
 
     // ---------- MÉTODOS AUXILIARES ----------
     // Método auxiliar para repetir os exercícios
-    // e não precisar fazer essa lógica de repetição em CADA metódo/exercício
-    public static void loopEx(Runnable exercicio) {
+    // para não precisar fazer essa lógica de repetição em CADA metódo/exercício
+    public static void loopEx(Runnable ex) {
         int opcao;
         do {
-            exercicio.run(); // Executa o exercício em questão, depois mostra a messagem abaixo:
+            ex.run(); // Executa o exercício em questão, depois mostra a messagem abaixo:
             System.out.println("\n---------- FIM DO EXERCÍCIO ----------");
             System.out.println("O que deseja fazer agora?");
             System.out.println("1 - Repetir o último exercício escolhido");
@@ -76,39 +76,38 @@ public class Lista3 {
         int contador = 0;
         System.out.println("---------- EXERCÍCIO 01 ----------");
         System.out.println("Digite caracteres mas apenas um por vez.");
-        System.out.println("Ou digite apenas \".\" para parar e contar os caracteres digitados): ");
+        System.out.println("Ou digite apenas \".\" para parar e contar quantos caracteres foram digitados): ");
         do { 
             caractere = sc.next().charAt(0);
             contador++;
         } while (caractere != '.');
-        System.out.printf("Foram digitados %d caracteres", --contador);
+        System.out.printf("Foram digitados %d caracteres%n", --contador);
     }
 
     // Peça uma palavra e conte quantas vogais ela contém (sem usar array, apenas com repetição e charAt).
     public static void ex02 () {
-        String palavra;
-        int qtdVogais = 0;
-        sc.nextLine(); // Limpando buffer
+        sc.nextLine(); // Limpando buffer do menu
         System.out.println("---------- EXERCÍCIO 02 ----------");
-        System.out.print("Digite uma palavra: ");
-        palavra = sc.nextLine().toLowerCase();
+        System.out.print("Digite uma palavra para contar suas vogais: ");
+        String palavra = sc.nextLine().toLowerCase();
         palavra = Normalizer.normalize(palavra, Normalizer.Form.NFD).replaceAll("\\p{M}", ""); // Para tranformar letras com acentos em normais
+        int qtdVogais = 0;
         for (int i = 0; i < palavra.length(); i++) {
             char letra = palavra.charAt(i);
             if (letra == 'a' || letra == 'e' || letra == 'i' || letra == 'o' || letra == 'u') {
                 qtdVogais++;
             } 
         }
-        System.out.printf("Quantidade de vogais na palavra \"%s\": %d", palavra, qtdVogais);
+        System.out.printf("Quantidade de vogais na palavra \"%s\": %d%n", palavra, qtdVogais);
     }
 
     // Peça uma palavra e um número n. Mostre a palavra repetida n vezes, uma por linha.
     public static void ex03 () {
-        sc.nextLine(); // Limpando buffer
+        sc.nextLine(); // Limpando buffer do menu
         System.out.println("---------- EXERCÍCIO 03 ----------");
-        System.out.print("Digite uma palavra: ");
+        System.out.print("Digite uma palavra para ser repetida: ");
         String palavra = sc.nextLine();
-        System.out.println("Quantas vezes você quer que essa palavra seja repetida?");
+        System.out.print("Digite a quantidade desejada de repetições: ");
         int n = sc.nextInt();
         for (int i = 0; i < n; i++) {
             System.out.println(palavra);
@@ -117,12 +116,12 @@ public class Lista3 {
 
     // Leia frases do usuário em loop. Quando ele digitar "sair", o programa termina.   
     public static void ex04 () {
-        sc.nextLine(); // Limpando buffer
+        sc.nextLine(); // Limpando buffer do menu
         System.out.println("---------- EXERCÍCIO 04 ----------");
         System.out.print("Digite uma frase: ");
         String frase = sc.nextLine();
         while (!frase.equalsIgnoreCase("sair")) { 
-            System.out.printf("Você disse: \"%s\"\n", frase);
+            System.out.printf("Você disse: \"%s\"%n", frase);
             System.out.print("Digite outra frase (ou \"sair\" para parar o ex.): ");
             frase = sc.nextLine();
         }
@@ -131,7 +130,7 @@ public class Lista3 {
 
     // Continue pedindo um nome até que o usuário digite algo com pelo menos 3 letras.  
     public static void ex05 () {
-        sc.nextLine(); // Limpando buffer
+        sc.nextLine(); // Limpando buffer do menu
         System.out.println("---------- EXERCÍCIO 05 ----------");
         System.out.print("Digite um nome: ");
         String nome = sc.nextLine();
@@ -141,12 +140,12 @@ public class Lista3 {
             nome = sc.nextLine();
             tamanho = nome.length();
         }
-        System.out.printf("O nome digitado foi: \"%s\"", nome);
+        System.out.printf("O nome digitado foi: \"%s\"%n", nome);
     }
 
     // Solicite uma senha e peça confirmação até que ambas coincidam.
     public static void ex06 () {
-        sc.nextLine(); // Limpando buffer
+        sc.nextLine(); // Limpando buffer do menu
         System.out.println("---------- EXERCÍCIO 06 ----------");
         System.out.print("Digite uma senha: ");
         String senha = sc.nextLine();
@@ -161,11 +160,33 @@ public class Lista3 {
     }
 
     // Número fixo oculto. O usuário tem até 5 tentativas para adivinhar.
-    public static void ex07 () {
-
+    public static void ex07() {
+    System.out.println("---------- EXERCÍCIO 07 ----------");
+    int numero = rand.nextInt(1, 21);
+    int palpite;
+    boolean acertou = false;
+    System.out.println("Há um número oculto de 1 a 20. Tente adivinhar qual é em até 5 tentativas.");
+    for (int tentativas = 1; tentativas <= 5; tentativas++) {
+        System.out.print("Diga seu palpite: ");
+        palpite = sc.nextInt();
+        if (numero == palpite) {
+            System.out.printf("Parabéns! Você acertou na %dª tentativa!%n", tentativas);
+            acertou = true;
+            break;
+        } else if (tentativas < 5) {
+            String dica = numero > palpite ? "MAIOR" : "MENOR";
+            System.out.printf("Você errou! Restam %d tentativa(s).%n", 5 - tentativas);
+            System.out.printf("Dica: o número é %s que seu palpite anterior.%n", dica);
+        }
     }
+    if (!acertou) {
+        System.out.println("Infelizmente, suas tentativas acabaram...");
+        System.out.printf("O número era \"%d\".%n", numero);
+    }
+}
 
-    // Permita votar em três candidatos até que a palavra "\nfim" seja digitada. Conte os votos.
+
+    // Permita votar em três candidatos até que a palavra "fim" seja digitada. Conte os votos.
     public static void ex08 () {
 
     }
@@ -210,7 +231,7 @@ public class Lista3 {
 
     }
 
-    // Permita o cadastro de nome e preço de produtos até que "\nfim" seja digitado. Calcule o total geral.
+    // Permita o cadastro de nome e preço de produtos até que "fim" seja digitado. Calcule o total geral.
     public static void ex17 () {
 
     }
