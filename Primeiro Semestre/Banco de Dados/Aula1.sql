@@ -1,15 +1,15 @@
+-- Criando e usando o DB
 CREATE DATABASE kevynboom;
-
 USE kevynboom;
 
--- Template do Professor
-CREATE TABLE vendedores (
+-- Template das tables
+CREATE TABLE Vendedores (
     codigoVendedor INT PRIMARY KEY,
     nome VARCHAR(50),
     salarioFixo dec(10,4)
 );
 
-CREATE TABLE produtos (
+CREATE TABLE Produtos (
     codigoProduto INT PRIMARY KEY,
     nome VARCHAR(50),
     precoUnitario dec(10,4),
@@ -61,7 +61,7 @@ CREATE TABLE ItemPedidos (
         REFERENCES Pedidos(codigoPedido)
 );
 
--- Exemplos do Professor
+-- Mais comandos SQL
 ALTER TABLE clientes ADD statusCliente BIT;
 
 ALTER TABLE clientes DROP COLUMN statusCliente;
@@ -82,3 +82,16 @@ SHOW TABLES;
 SHOW COLUMNS FROM clientes;
 
 SHOW INDEX FROM clientes;
+
+INSERT INTO Produtos (codigoProduto, nome, precoUnitario, quantidadeEstoque)
+    VALUES (1, 'DVD', 100.44, 100) (2, 'Radio', 50.88, 50), (3, 'MP3', 99.33, 115), (4, 'Televisão', 1000.99, 66);
+
+SELECT * FROM produtos;
+
+UPDATE produtos SET precoUnitario = 199.44 WHERE codigoProduto = 1;
+UPDATE produtos SET precoUnitario = 199.44, nome = 'BlueRay' WHERE codigoProduto = 1;
+
+DELETE FROM produtos WHERE `codigoProduto` = 4;
+DELETE FROM produtos WHERE `codigoProduto` IN (1,4);
+
+DELETE FROM produtos WHERE codigoProduto BETWEEN 1 AND 4;
