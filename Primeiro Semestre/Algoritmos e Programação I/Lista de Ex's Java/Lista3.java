@@ -243,7 +243,7 @@ public class Lista3 {
                 return;
                 }
             } while (saldo > 0);
-        } catch (InputMismatchException e) {
+        } catch (InputMismatchException e) { // Usando "try-catch" pra sair do programa só pra não ter que receber tipo String no mesmo XD
             sc.nextLine();
             System.out.println("Você saiu, até logo!");
         }
@@ -324,6 +324,7 @@ public class Lista3 {
         }
         System.out.printf("Você acertou %d de 5 perguntas.\n", acertos);
         System.out.println("Até logo!");
+        // Fiquei sem criatividade para as perguntas
     }
 
     // Peça uma letra e um número n. Mostre n vezes essa letra em uma mesma linha.
@@ -376,45 +377,169 @@ public class Lista3 {
 
     // Peça letras uma a uma até que o usuário digite a letra "x". Conte quantas vezes digitou vogais.
     public static void ex16 () {
-        
+        System.out.println("---------- EXERCÍCIO 16 ----------");
+        char letra;
+        int contador = 0;
+        System.out.println("Digite letras (sem acentos) mas apenas um por vez."); // Teria que converter pra String pra usar normalizer, quero simplificar aqui
+        System.out.println("Ou digite apenas \"x\" para parar e contar quantas vogais foram digitadas): ");
+        do { 
+            letra = sc.next().charAt(0);
+            Character.toLowerCase(letra);
+            if (letra == 'a' || letra == 'e' || letra == 'i' || letra == 'o' || letra == 'u') {
+                contador++;
+            }
+        } while (letra != 'x');
+        System.out.printf("Foram digitados %d vogais\n", contador);
     }
 
     // Permita o cadastro de nome e preço de produtos até que "fim" seja digitado. Calcule o total geral.
     public static void ex17 () {
-
+        sc.nextLine(); // Limpando buffer do menu
+        System.out.println("---------- EXERCÍCIO 17 ----------");
+        String nome;
+        double total = 0, valor;
+        do {
+            System.out.print("Digite o nome do produto (ou \"fim\" para parar): ");
+            nome = sc.next();
+            if (!nome.equalsIgnoreCase("fim")) {
+                System.out.print("Digite o preço do produto: ");
+                valor = sc.nextDouble();
+            } else {
+                break; // Para o loop sem perguntar o preço e evita ficar travado devido o Scanner
+            }
+            if (!nome.matches(".*\\d.*") && valor > 0) { // ".matches" para ver se o nome possui números (".*\\d.*")
+                total += valor;
+                System.out.printf("Produto \"%s\" com valor de \"R$%.2f\" cadastradado com sucesso!\n\n", nome, valor);
+            } else {
+                System.out.println("Erro ao cadastrar produto, tente novamente...\n");
+            }
+        } while (true);
+        System.out.printf("O total dos produtos foi: R$%.2f", total);
     }
 
     // Peça uma frase e conte quantas palavras tem (com base nos espaços).
     public static void ex18 () {
+        sc.nextLine(); // Limpando buffer do menu
+        System.out.println("---------- EXERCÍCIO 18 ----------");
+        int contador = 0;
+        System.out.print("Digite uma frase qualquer: ");
+        String frase = sc.nextLine().trim(); // ".trim" desconsidera os espaços do começo e fim da frase
+            for (int i = 0; i < frase.length(); i++) {
+                if (frase.charAt(i) == ' ') {
+                    contador++;
+                }   
+            }
+        System.out.printf("Você digitou %d palavras!", ++contador); // +1 no contador pois se digitar 4 palvras só vai ter (em tese) 3 espaços
 
+        // Do jeito que tá ATÉ funciona mas se tiver múltiplos espaços ENTRE palavras, o contador falha; O jeito abaixo seria eficaz mas tecnicamente é um array
+        // no qual não é o conteúdo dessa lista (não consegui pensar numa maneira de resolver os múltiplos espaços do meio sem array):
+        // int contador = frase.isEmpty() ? 0 : frase.split("\\s+").length;
+        // QUERO AULAS DE ARRAY LOGO (╯°□°)╯︵ ┻━┻
     }
 
     // Repetir senha até ter maiúscula, número e mínimo de 8 caracteres. Use repetição até uma senha válida ser digitada.
     public static void ex19 () {
-
+        sc.nextLine(); // Limpando buffer do menu
+        System.out.println("---------- EXERCÍCIO 19 ----------");
+        String senha;
+        do { 
+            System.out.print("Digite uma senha válida: ");
+            senha = sc.next();
+            if (senha.length() >= 8 && senha.matches(".*\\d.*") && senha.matches(".*[A-Z].*")) { // ".matches" para verificar os conteúdos desejados
+                System.out.println("Senha válida!");
+                break;
+            } else {
+                System.out.println("Não passou nos críterios, tente novamente...");
+                System.out.println("Precisa ter alguma letra maiúscula, número e mínimo de 8 caracteres.\n");
+            }
+        } while (true);
     }
 
     // Peça uma palavra e um caractere. Conte quantas vezes o caractere aparece.
     public static void ex20 () {
-
+        sc.nextLine(); // Limpando buffer do menu
+        System.out.println("---------- EXERCÍCIO 20 ----------");
+        int contador = 0;
+        System.out.print("Digite uma frase: ");
+        String frase = sc.nextLine().toLowerCase(); // Recebe minúsculo
+        System.out.print("Digite a letra que quer contar quantas tem na frase dita anteriormente: ");
+        char letra = Character.toLowerCase(sc.next().charAt(0)); // Recebe minúsculo (descobri só agora que dá pra fazer com char também no Scanner)
+        for (int i = 0; i < frase.length(); i++) {
+            if (frase.charAt(i) == letra) {
+                contador++;
+            }
+        }
+        System.out.printf("A letra \"%c\" aparece %d vez(es) na frase \"%s\"\n", letra, contador, frase);
     }
 
     // Peça um número entre 1 e 100. Repita enquanto estiver fora do intervalo.
     public static void ex21 () {
-
+        System.out.println("---------- EXERCÍCIO 21 ----------");
+        int numero;
+        do { 
+            System.out.print("Digite um número de 1 a 100: ");
+            numero = sc.nextInt();
+        } while (numero > 100 || numero < 1);
+        System.out.printf("Número \"%d\" recebido.", numero);
     }
 
     // Peça uma String e some os dígitos presentes (ex: "a2c4" → 6).
     public static void ex22 () {
-
+        sc.nextLine(); // Limpando buffer do menu
+        System.out.println("---------- EXERCÍCIO 21 ----------");
+        int total = 0;
+        System.out.print("Digite uma frase: ");
+        String frase = sc.nextLine();
+        for (int i = 0; i < frase.length(); i++) {
+            char letra = frase.charAt(i);
+            if (Character.isDigit(letra)) { // Se "letra" for um número (pessímo nome de variável, eu sei)
+                total += Character.getNumericValue(letra); // Pega esse número e soma na total
+            }
+        }
+        System.out.printf("A soma dos dígitos contidos na frase é: %d\n", total);
     }
-
     // Peça a digitação de um número inteiro até que seja digitado um valor negativo. 
     // Ao digitar um valor negativo, deverão ser exibidos a média dos números digitados, o menor número, o maior número, 
     // quantidade de números pares e quantidade de números ímpares.
     public static void ex23 () {
-
+        System.out.println("---------- EXERCÍCIO 23 ----------");
+        int numero, menor = 0, maior = 0, pares = 0, impares = 0, quantidade = 0;
+        double soma = 0;
+        while (true) {
+            System.out.print("Digite um número inteiro (ou um número negativo para parar): ");
+            numero = sc.nextInt();
+            if (numero < 0) {
+                break;
+            }
+            if (quantidade == 0) {
+                menor = numero;
+                maior = numero;
+            } else {
+                if (numero < menor) {
+                    menor = numero;
+                }
+                if (numero > maior) {
+                    maior = numero;
+                }
+            }
+            soma += numero;
+            quantidade++;
+            if (numero % 2 == 0) {
+                pares++;
+            } else {
+                impares++;
+            }
+        }
+        if (quantidade > 0) {
+            double media = soma / quantidade;
+            System.out.printf("\nMédia: %.2f\n", media);
+            System.out.printf("Menor número: %d\n", menor);
+            System.out.printf("Maior número: %d\n", maior);
+            System.out.printf("Quantidade de pares: %d\n", pares);
+            System.out.printf("Quantidade de ímpares: %d\n", impares);
+        } else {
+            System.out.println("Nenhum número válido foi digitado.");
+        }
     }
-
-    
+    // 500+ linhas de código, uau.
 }
