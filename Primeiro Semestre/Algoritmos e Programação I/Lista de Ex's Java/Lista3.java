@@ -1,4 +1,5 @@
 import java.text.Normalizer;
+import java.util.InputMismatchException;
 import java.util.Random;
 import java.util.Scanner;
 // Salve professor! Essa lista eu quis fazer bem mais completinha pois eu queria treinar mais, então será
@@ -81,12 +82,12 @@ public class Lista3 {
             caractere = sc.next().charAt(0);
             contador++;
         } while (caractere != '.');
-        System.out.printf("Foram digitados %d caracteres%n", --contador);
+        System.out.printf("Foram digitados %d caracteres\n", --contador);
     }
 
     // Peça uma palavra e conte quantas vogais ela contém (sem usar array, apenas com repetição e charAt).
     public static void ex02 () {
-        sc.nextLine(); // Limpando buffer do menu
+        sc.nextLine(); // Limpando buffer do menu (sempre que pedir String primeiro no ex. precisa disso...)
         System.out.println("---------- EXERCÍCIO 02 ----------");
         System.out.print("Digite uma palavra para contar suas vogais: ");
         String palavra = sc.nextLine().toLowerCase();
@@ -98,7 +99,7 @@ public class Lista3 {
                 qtdVogais++;
             } 
         }
-        System.out.printf("Quantidade de vogais na palavra \"%s\": %d%n", palavra, qtdVogais);
+        System.out.printf("Quantidade de vogais na palavra \"%s\": %d\n", palavra, qtdVogais);
     }
 
     // Peça uma palavra e um número n. Mostre a palavra repetida n vezes, uma por linha.
@@ -121,7 +122,7 @@ public class Lista3 {
         System.out.print("Digite uma frase: ");
         String frase = sc.nextLine();
         while (!frase.equalsIgnoreCase("sair")) { 
-            System.out.printf("Você disse: \"%s\"%n", frase);
+            System.out.printf("Você disse: \"%s\"\n", frase);
             System.out.print("Digite outra frase (ou \"sair\" para parar o ex.): ");
             frase = sc.nextLine();
         }
@@ -140,7 +141,7 @@ public class Lista3 {
             nome = sc.nextLine();
             tamanho = nome.length();
         }
-        System.out.printf("O nome digitado foi: \"%s\"%n", nome);
+        System.out.printf("O nome digitado foi: \"%s\"\n", nome);
     }
 
     // Solicite uma senha e peça confirmação até que ambas coincidam.
@@ -170,65 +171,212 @@ public class Lista3 {
         System.out.print("Diga seu palpite: ");
         palpite = sc.nextInt();
         if (numero == palpite) {
-            System.out.printf("Parabéns! Você acertou na %dª tentativa!%n", tentativas);
+            System.out.printf("Parabéns! Você acertou na %dª tentativa!\n", tentativas);
             acertou = true;
             break;
         } else if (tentativas < 5) {
             String dica = numero > palpite ? "MAIOR" : "MENOR";
-            System.out.printf("Você errou! Restam %d tentativa(s).%n", 5 - tentativas);
-            System.out.printf("Dica: o número é %s que seu palpite anterior.%n", dica);
+            System.out.printf("Você errou! Restam %d tentativa(s).\n", 5 - tentativas);
+            System.out.printf("Dica: o número é %s que seu palpite anterior.\n", dica);
         }
     }
     if (!acertou) {
         System.out.println("Infelizmente, suas tentativas acabaram...");
-        System.out.printf("O número era \"%d\".%n", numero);
+        System.out.printf("O número era \"%d\".\n", numero);
     }
 }
 
 
     // Permita votar em três candidatos até que a palavra "fim" seja digitada. Conte os votos.
     public static void ex08 () {
-
+        sc.nextLine(); // Limpando buffer do menu
+        System.out.println("---------- EXERCÍCIO 08 ----------");
+        int fulano = 0, ciclano = 0, deltrano = 0, nulo = 0;
+        String voto;
+        System.out.println("Temos 3 candidatos competindo, sendo: ");
+        System.out.println("Fulano = 12");
+        System.out.println("Ciclano = 23");
+        System.out.println("Deltrano = 67");
+        do {
+            System.out.print("Digite o número desejado (ou digite \"fim\" para parar): ");
+            voto = sc.next();
+            switch (voto) {
+                case "12" -> fulano++;
+                case "23" -> ciclano++;
+                case "67" -> deltrano++;
+                default -> nulo++;
+            }
+        } while (!voto.equalsIgnoreCase("fim"));
+        System.out.println("Contando votos...");
+        System.out.printf("Fulano = %d\n", fulano);
+        System.out.printf("Ciclano = %d\n", ciclano);
+        System.out.printf("Deltrano = %d\n", deltrano);
+        if (nulo > 0) {
+            nulo--; // o Enter do scanner estava contando pra nulos
+        }
+        System.out.printf("Votos nulos = %d\n", nulo);
+        System.out.println("VOTAÇÃO ENCERRADA!");
     }
 
     // Simule um caixa eletrônico que permite vários saques até o saldo acabar ou o usuário sair.
     public static void ex09 () {
-
+        System.out.println("---------- EXERCÍCIO 09 ----------");
+        double saldo = 2500, bolso = 0, saque;
+        System.out.println("Bem vindo(a) ao CruBank!");
+        try {
+            do {
+                System.out.printf("Você têm R$%.2f de saldo disponível.\n", saldo);
+                System.out.println("Digite o valor do saque (ou qualquer letra para sair): ");
+                saque = sc.nextDouble();
+                while (saque <=0) {
+                    System.out.print("Digite um valor válido: ");
+                    saque = sc.nextDouble();
+                }
+                if (saldo > saque) {
+                    saldo -= saque;
+                    bolso += saque;
+                    System.out.printf("Saque realizado com sucesso, você agora tem R$%.2f no bolso.\n\n", bolso);
+                } else {
+                    System.out.println("Seu saldo é insuficiente para este saque, sentímos muito!");
+                    System.out.printf("Você ficou com R$%.2f no bolso.\n", bolso);
+                    System.out.println("Fechando caixa eletrônico...");
+                return;
+                }
+            } while (saldo > 0);
+        } catch (InputMismatchException e) {
+            sc.nextLine();
+            System.out.println("Você saiu, até logo!");
+        }
     }
 
     // Faça uma pergunta (ex: "Qual a capital do Brasil?") até que o usuário acerte.
     public static void ex10 () {
-
+        sc.nextLine(); // Limpando buffer do menu
+        System.out.println("---------- EXERCÍCIO 10 ----------");
+        System.out.println("Pergunta valendo 1 MILHÃO DE REAIS!!!");
+        System.out.println("Qual a capital do Brasil?");
+        System.out.print("Resposta: ");
+        String resposta = sc.nextLine();
+        while (!resposta.equalsIgnoreCase("brasil")) { 
+            System.out.println("ERRADO!!!!");
+            System.out.print("Responda de novo: ");
+            resposta = sc.nextLine();
+        }
+        System.out.println("PARABÉNS!! VOCÊ AGORA É MILIONÁRIO!");
     }
 
     // Peça CPF até que seja digitado com exatamente 11 dígitos.
     public static void ex11 () {
-
+        sc.nextLine(); // Limpando buffer do menu
+        System.out.println("---------- EXERCÍCIO 11 ----------");
+        String cpf = "";
+        while (cpf.length() != 11) { 
+            System.out.println("Digite um CPF:");
+            cpf = sc.nextLine();
+        }
+        System.out.printf("Você digitou: %s.\n", cpf);
     }
 
     // Faça 5 perguntas em sequência. Conte quantas foram respondidas corretamente.
     public static void ex12 () {
-
+        System.out.println("---------- EXERCÍCIO 12 ----------");
+        int acertos = 0;
+        System.out.println("MEGA-SENA DAS 5 PERGUNTAS");
+        System.out.println("Pergunta 01");
+        System.out.println("Quanto é 1 + 1? ");
+        System.out.print("Reposta: ");
+        int num1 = sc.nextInt();
+        sc.nextLine(); // Limpando buffer
+        if (num1 == 2) {
+            acertos++;
+        }
+        System.out.println("Pergunta 02");
+        System.out.println("Qual a capital do São Paulo? ");
+        System.out.print("Reposta: ");
+        String capital1 = sc.nextLine().toLowerCase(); // Eu esqueço que dá pra deixar lowercase no próprio Scanner...
+        // Tratamento para tranformar letras com acentos em normais e tirar os espaços:
+        capital1 = Normalizer.normalize(capital1, Normalizer.Form.NFD).replaceAll("\\p{M}", "").replace(" ", ""); 
+        if (capital1.contains("saopaulo")) { // Só agora pensei em usar o ".contains" :/
+            acertos++;
+        }
+        System.out.println("Pergunta 03");
+        System.out.println("Quanto é 1 - 1? ");
+        System.out.print("Reposta: ");
+        int num2 = sc.nextInt();
+        if (num2 == 0) {
+            acertos++;
+        }
+        System.out.println("Pergunta 04");
+        System.out.println("Quanto é 0 x 0? ");
+        System.out.print("Reposta: ");
+        int num3 = sc.nextInt();
+        sc.nextLine(); // Limpando buffer
+        if (num3 == 0) {
+            acertos++;
+        }
+        System.out.println("Pergunta 05");
+        System.out.println("Qual a capital do Acre? ");
+        System.out.print("Reposta: ");
+        String capital2 = sc.nextLine().toLowerCase();
+        capital2 = Normalizer.normalize(capital2, Normalizer.Form.NFD).replaceAll("\\p{M}", "").replace(" ", ""); 
+        if (capital2.contains("riobranco")) { 
+            acertos++;
+        }
+        System.out.printf("Você acertou %d de 5 perguntas.\n", acertos);
+        System.out.println("Até logo!");
     }
 
     // Peça uma letra e um número n. Mostre n vezes essa letra em uma mesma linha.
     public static void ex13 () {
-
+        sc.nextLine(); // Limpando buffer do menu
+        System.out.println("---------- EXERCÍCIO 13 ----------"); // Mesma coisa do 03 basicamente
+        System.out.print("Digite uma letra para ser repetida: ");
+        char letra = sc.next().charAt(0); // Só muda aqui 
+        System.out.print("Digite a quantidade desejada de repetições: ");
+        int n = sc.nextInt();
+        for (int i = 0; i < n; i++) {
+            System.out.print(letra); // E aqui
+        } 
     }
 
     // Simule o lançamento de um dado 10 vezes, mostrando os resultados (use um gerador de números aleatórios).
     public static void ex14 () {
-
+        System.out.println("---------- EXERCÍCIO 14 ----------");
+        System.out.println("Lançando dado 10 vezes:");
+        for (int i = 1; i < 11; i++) {
+            int dado = rand.nextInt(1,7);
+            System.out.printf("Lançamento %d: %d\n", i, dado);
+        }
     }
 
     // Mostre um menu com 3 opções. Repita até o usuário escolher "Sair".
     public static void ex15 () {
-
+        sc.nextLine(); // Limpando buffer do menu
+        System.out.println("---------- EXERCÍCIO 15 ----------"); // Mesma coisa do 03 basicamente
+        String escolha;
+        do { 
+            System.out.println("Menu de 3 opções: ");
+            System.out.println("1 - Tô sem ideia 01");
+            System.out.println("2 - Tô sem ideia 02");
+            System.out.println("3 - Tô sem ideia 03");
+            System.out.println("Ou digite \"sair\"");
+            System.out.print("Digite o número da escolha desejada: ");
+            escolha = sc.next().toLowerCase();
+            while (!escolha.equals("1") && !escolha.equals("2") && !escolha.equals("3")) {
+                if (escolha.contains("sair")) {
+                    break;
+                }
+                System.out.print("Inválido, escolha de novo: ");
+                escolha = sc.next();
+            }
+            System.out.println("Você escolheu: " + escolha);
+        } while (!escolha.equalsIgnoreCase("sair"));
+        System.out.println("Você saiu. Até logo!");
     }
 
     // Peça letras uma a uma até que o usuário digite a letra "x". Conte quantas vezes digitou vogais.
     public static void ex16 () {
-
+        
     }
 
     // Permita o cadastro de nome e preço de produtos até que "fim" seja digitado. Calcule o total geral.
