@@ -486,7 +486,7 @@ public class Lista3 {
     // Peça uma String e some os dígitos presentes (ex: "a2c4" → 6).
     public static void ex22 () {
         sc.nextLine(); // Limpando buffer do menu
-        System.out.println("---------- EXERCÍCIO 21 ----------");
+        System.out.println("---------- EXERCÍCIO 22 ----------");
         int total = 0;
         System.out.print("Digite uma frase: ");
         String frase = sc.nextLine();
