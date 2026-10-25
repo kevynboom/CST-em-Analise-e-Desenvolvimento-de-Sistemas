@@ -6,7 +6,7 @@ import java.util.Scanner;
 // possível notar coisas não aplicadas nas aulas mas que pesquisei a parte pra aprender a usar (como o uso do Runnable).
 // Código feito sem IA generativa!
 public class Lista3 {
-    // Váriaveis Globais
+    // Variáveis Globais
     static Scanner sc = new Scanner(System.in);
     static Random rand = new Random();
     // ---------- MÉTODO PRINCIPAL (MENU) ----------
