@@ -1,4 +1,4 @@
-LISTA DE EXERCÍCIOS 2 - 12/08/26 (Nome no BlackBoard é "Lista de Exercícios 1", está na seção "Aulas")
+LISTA DE EXERCÍCIOS 2 (Nome no BlackBoard é "Lista de Exercícios 1")
 
 1) Faça um programa que receba quatro números inteiros, calcule e mostre a soma desses números.
 ALGORITMO

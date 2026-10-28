@@ -1,4 +1,4 @@
-LISTA DE EXERCÍCIOS 7 - 07/10/26 (Nome no BlackBoard é "Lista de Exercícios 6", está na seção "Aulas")
+LISTA DE EXERCÍCIOS 7 (Nome no BlackBoard é "Lista de Exercícios 6")
 
 1) Faça um programa que preencha um vetor com nove números inteiros, calcule e mostre os números
 primos e suas respectivas posições.

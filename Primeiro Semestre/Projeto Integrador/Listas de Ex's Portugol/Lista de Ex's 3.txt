@@ -1,4 +1,4 @@
-LISTA DE EXERCÍCIOS 3 - 12/08/26 (Nome no BlackBoard é "Lista de Exercícios 2", está na seção "Aulas")
+LISTA DE EXERCÍCIOS 3 (Nome no BlackBoard é "Lista de Exercícios 2")
 
 1) Faça um programa que calcule e mostre a área de um círculo. Sabe-se que: Área = π ∗ R2.
 ALGORITMO

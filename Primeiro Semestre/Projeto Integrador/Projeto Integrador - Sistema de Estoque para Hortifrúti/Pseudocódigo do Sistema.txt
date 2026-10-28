@@ -1,0 +1,225 @@
+ALGORITMO
+DECLARE NOMES[100], CATEGORIAS[100] LITERAL
+DECLARE PRECOS[100], QUANTIDADES[100] NUMÉRICO
+DECLARE TOTAL_PRODUTOS, OP, I NUMÉRICO
+TOTAL_PRODUTOS ← 0
+
+REPITA
+    ESCREVA "===== HORTIFRÚTI ====="
+    ESCREVA "1 - Cadastrar produto"
+    ESCREVA "2 - Listar produtos"
+    ESCREVA "3 - Consultar produto"
+    ESCREVA "4 - Editar produto"
+    ESCREVA "5 - Remover produto"
+    ESCREVA "6 - Calcular valor do estoque"
+    ESCREVA "0 - Sair"
+    ESCREVA "Escolha uma opção: "
+    LEIA OP
+    SE OP = 1
+    ENTÃO cadastrar_produto()
+    SENÃO 
+        SE OP = 2
+        ENTÃO listar_produtos()
+        SENÃO
+            SE OP = 3
+            ENTÃO consultar_produto()
+            SENÃO
+                SE OP = 4
+                ENTÃO editar_produto()
+                SENÃO
+                    SE OP = 5
+                    ENTÃO remover_produto()
+                    SENÃO
+                        SE OP = 6
+                        ENTÃO calcular_valor_estoque()
+                        SENÃO
+                            SE OP <> 0
+                            ENTÃO ESCREVA "Opção inválida!"
+                        FIM
+                    FIM
+                FIM
+            FIM
+        FIM
+    FIM
+ATÉ OP = 0
+ESCREVA "Sistema encerrado."
+FIM_ALGORITMO.
+
+SUB_ROTINA cadastrar_produto
+DECLARE NOME, CATEGORIA LITERAL
+DECLARE PRECO, QUANTIDADE, POSICAO NUMÉRICO
+SE TOTAL_PRODUTOS = 100
+ENTÃO
+    ESCREVA "Limite de produtos atingido."
+SENÃO
+    ESCREVA "Nome do produto: "
+    LEIA NOME
+    POSICAO ← buscar_produto(NOME)
+    SE POSICAO <> -1
+    ENTÃO
+        ESCREVA "Já existe um produto com esse nome."
+    SENÃO
+        CATEGORIA ← ler_categoria()
+        REPITA
+            ESCREVA "Preço do produto: "
+            LEIA PRECO
+            SE PRECO < 0
+            ENTÃO ESCREVA "O preço não pode ser negativo."
+        ATÉ PRECO >= 0
+        REPITA
+            ESCREVA "Quantidade em estoque: "
+            LEIA QUANTIDADE
+            SE QUANTIDADE < 0
+            ENTÃO ESCREVA "A quantidade não pode ser negativa."
+        ATÉ QUANTIDADE >= 0
+        TOTAL_PRODUTOS ← TOTAL_PRODUTOS + 1
+        NOMES[TOTAL_PRODUTOS] ← NOME
+        CATEGORIAS[TOTAL_PRODUTOS] ← CATEGORIA
+        PRECOS[TOTAL_PRODUTOS] ← PRECO
+        QUANTIDADES[TOTAL_PRODUTOS] ← QUANTIDADE
+        ESCREVA "Produto cadastrado com sucesso."
+    FIM
+FIM
+FIM_SUB_ROTINA cadastrar_produto.
+
+SUB_ROTINA ler_categoria
+DECLARE OPCAO NUMÉRICO
+DECLARE CATEGORIA LITERAL
+CATEGORIA ← ""
+REPITA
+    ESCREVA "Categoria do produto:"
+    ESCREVA "1 - Fruta"
+    ESCREVA "2 - Legume"
+    ESCREVA "3 - Verdura"
+    ESCREVA "Escolha a categoria: "
+    LEIA OPCAO
+    SE OPCAO = 1
+    ENTÃO CATEGORIA ← "Fruta"
+    SENÃO
+        SE OPCAO = 2
+        ENTÃO CATEGORIA ← "Legume"
+        SENÃO
+            SE OPCAO = 3
+            ENTÃO CATEGORIA ← "Verdura"
+            SENÃO
+                CATEGORIA ← ""
+                ESCREVA "Categoria inválida."
+            FIM
+        FIM
+    FIM
+ATÉ CATEGORIA <> ""
+RETORNE CATEGORIA
+FIM_SUB_ROTINA ler_categoria.
+
+SUB_ROTINA listar_produtos
+DECLARE I NUMÉRICO
+SE TOTAL_PRODUTOS = 0
+ENTÃO
+    ESCREVA "Não há produtos cadastrados."
+SENÃO
+    PARA I ← 1 ATÉ TOTAL_PRODUTOS FAÇA
+        ESCREVA "Nome: ", NOMES[I]
+        ESCREVA "Categoria: ", CATEGORIAS[I]
+        ESCREVA "Preço: R$ ", PRECOS[I]
+        ESCREVA "Quantidade: ", QUANTIDADES[I]
+        ESCREVA "-------------------------"
+    FIM_PARA
+FIM
+FIM_SUB_ROTINA listar_produtos.
+
+SUB_ROTINA consultar_produto
+DECLARE NOME LITERAL
+DECLARE POSICAO NUMÉRICO
+ESCREVA "Digite o nome do produto que deseja consultar: "
+LEIA NOME
+POSICAO ← buscar_produto(NOME)
+SE POSICAO = -1
+ENTÃO
+    ESCREVA "Produto não encontrado."
+SENÃO
+    ESCREVA "Nome: ", NOMES[POSICAO]
+    ESCREVA "Categoria: ", CATEGORIAS[POSICAO]
+    ESCREVA "Preço: R$ ", PRECOS[POSICAO]
+    ESCREVA "Quantidade: ", QUANTIDADES[POSICAO]
+FIM
+FIM_SUB_ROTINA consultar_produto.
+
+SUB_ROTINA editar_produto
+DECLARE NOME, NOVO_NOME, CATEGORIA LITERAL
+DECLARE POSICAO, POSICAO_NOME, I NUMÉRICO
+DECLARE NOVO_PRECO, NOVA_QUANTIDADE NUMÉRICO
+ESCREVA "Digite o nome do produto que deseja editar: "
+LEIA NOME
+POSICAO ← buscar_produto(NOME)
+SE POSICAO = -1
+ENTÃO
+    ESCREVA "Produto não encontrado."
+SENÃO
+    ESCREVA "Novo nome do produto: "
+    LEIA NOVO_NOME
+    POSICAO_NOME ← buscar_produto(NOVO_NOME)
+    SE POSICAO_NOME <> -1 E POSICAO_NOME <> POSICAO
+    ENTÃO
+        ESCREVA "Já existe outro produto com esse nome."
+    SENÃO
+        CATEGORIA ← ler_categoria()
+        REPITA
+            ESCREVA "Novo preço: "
+            LEIA NOVO_PRECO
+            SE NOVO_PRECO < 0
+            ENTÃO ESCREVA "O preço não pode ser negativo."
+        ATÉ NOVO_PRECO >= 0
+        REPITA
+            ESCREVA "Nova quantidade: "
+            LEIA NOVA_QUANTIDADE
+            SE NOVA_QUANTIDADE < 0
+            ENTÃO ESCREVA "A quantidade não pode ser negativa."
+        ATÉ NOVA_QUANTIDADE >= 0
+        NOMES[POSICAO] ← NOVO_NOME
+        CATEGORIAS[POSICAO] ← CATEGORIA
+        PRECOS[POSICAO] ← NOVO_PRECO
+        QUANTIDADES[POSICAO] ← NOVA_QUANTIDADE
+        ESCREVA "Produto atualizado com sucesso."
+    FIM
+FIM
+FIM_SUB_ROTINA editar_produto.
+
+SUB_ROTINA remover_produto
+DECLARE NOME LITERAL
+DECLARE POSICAO, I NUMÉRICO
+ESCREVA "Digite o nome do produto que deseja remover: "
+LEIA NOME
+POSICAO ← buscar_produto(NOME)
+SE POSICAO = -1
+ENTÃO
+    ESCREVA "Produto não encontrado."
+SENÃO
+    PARA I ← POSICAO ATÉ TOTAL_PRODUTOS - 1 FAÇA
+        NOMES[I] ← NOMES[I + 1]
+        CATEGORIAS[I] ← CATEGORIAS[I + 1]
+        PRECOS[I] ← PRECOS[I + 1]
+        QUANTIDADES[I] ← QUANTIDADES[I + 1]
+    FIM_PARA
+    TOTAL_PRODUTOS ← TOTAL_PRODUTOS - 1
+    ESCREVA "Produto removido com sucesso."
+FIM
+FIM_SUB_ROTINA remover_produto.
+
+SUB_ROTINA calcular_valor_estoque
+DECLARE I NUMÉRICO
+DECLARE VALOR_TOTAL NUMÉRICO
+VALOR_TOTAL ← 0
+PARA I ← 1 ATÉ TOTAL_PRODUTOS FAÇA
+    VALOR_TOTAL ← VALOR_TOTAL + (PRECOS[I] * QUANTIDADES[I])
+FIM_PARA
+ESCREVA "Valor total do estoque: R$ ", VALOR_TOTAL
+FIM_SUB_ROTINA calcular_valor_estoque.
+
+SUB_ROTINA buscar_produto(NOME_PROCURADO LITERAL)
+DECLARE I NUMÉRICO
+PARA I ← 1 ATÉ TOTAL_PRODUTOS FAÇA
+    SE NOMES[I] = NOME_PROCURADO
+    ENTÃO RETORNE I
+FIM_PARA
+RETORNE -1
+FIM_SUB_ROTINA buscar_produto.

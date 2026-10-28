@@ -1,4 +1,4 @@
-LISTA DE EXERCÍCIOS 4 - 26/08/26 (Nome no BlackBoard é "Lista de Exercícios 3", está na seção "Aulas")
+LISTA DE EXERCÍCIOS 4 (Nome no BlackBoard é "Lista de Exercícios 3")
 
 1) Faça um programa que receba três notas de um aluno, calcule e mostre a média aritmética e a
 mensagem constante na tabela a seguir. Aos alunos que ficaram para exame, calcule e mostre a nota
