@@ -84,7 +84,7 @@ SHOW COLUMNS FROM clientes;
 SHOW INDEX FROM clientes;
 
 INSERT INTO Produtos (codigoProduto, nome, precoUnitario, quantidadeEstoque)
-    VALUES (1, 'DVD', 100.44, 100) (2, 'Radio', 50.88, 50), (3, 'MP3', 99.33, 115), (4, 'Televisão', 1000.99, 66);
+    VALUES (1, 'DVD', 100.44, 100), (2, 'Radio', 50.88, 50), (3, 'MP3', 99.33, 115), (4, 'Televisão', 1000.99, 66);
 
 SELECT * FROM produtos;
 
