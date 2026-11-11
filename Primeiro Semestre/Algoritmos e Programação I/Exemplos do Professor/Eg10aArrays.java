@@ -147,7 +147,7 @@ public class Eg10aArrays {
     public static boolean ArrayBuscarBoolean(String[] array, String alvo) {
         for (String s : array) {
             if (s.equals(alvo)) {
-                return true;
+                return true; // Se achar o alvo, retorna verdadeiro
             }
         }
         return false;

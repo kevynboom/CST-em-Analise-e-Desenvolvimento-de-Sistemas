@@ -2,9 +2,7 @@ import java.text.Normalizer;
 import java.util.InputMismatchException;
 import java.util.Random;
 import java.util.Scanner;
-// Salve professor! Essa lista eu quis fazer bem mais completinha pois eu queria treinar mais, então será
-// possível notar coisas não aplicadas nas aulas mas que pesquisei a parte pra aprender a usar (como o uso do Runnable).
-// Código feito sem IA generativa!
+
 public class Lista3 {
     // Variáveis Globais
     static Scanner sc = new Scanner(System.in);
